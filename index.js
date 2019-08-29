@@ -1,4 +1,5 @@
 /* eslint no-invalid-this: 0 */
+/* eslint no-unused-vars: 0 */
 console.log('%c 🦄 Hello curious voyager! ',
   'background: black; color: #68c3a3');
 
@@ -9,7 +10,7 @@ console.log('%c 🦄 Hello curious voyager! ',
 $('.lazy').lazy();
 
 $('#pre-status').fadeOut();
-$('#tt-preloader').delay(300).fadeOut('slow');
+$('#tt-preloader').delay(50).fadeOut('slow');
 
 // -------------------------------------------------------------
 // Full Screen Slider
@@ -46,12 +47,10 @@ $('a[href*="#"]').bind('click', function(e) {
   }, 1000);
   // e.preventDefault();
 });
-
-(function() {
-  new WOW({
-    mobile: false,
-  }).init();
-}());
+const Wow = window.WOW;
+const wowInstance = new Wow({
+  mobile: false,
+}).init();
 
 // -------------------------------------------------------------
 // Countup
@@ -173,13 +172,15 @@ function loadAPI() {
     dataType: 'jsonp',
 
     success: function(result, status, xhr) {
+      const Google = window.google;
       const myLatLng = { lat: 42.669, lng: 23.280 };
-      const map = new google.maps.Map(
+
+      const map = new Google.maps.Map(
         document.body.querySelector('.location-map'), {
           center: myLatLng,
           zoom: 11,
         });
-      const marker = new google.maps.Marker({
+      const marker = new Google.maps.Marker({
         position: myLatLng,
         map: map,
         title: 'Hello World!',
@@ -200,9 +201,16 @@ $('#contactForm').on('submit', function(e) {
   const $action = $(this).prop('action');
   const $data = $(this).serialize();
   const $this = $(this);
+  const name = $this.find('#name').val();
+  const email = $this.find('#email').val();
+  const subject = $this.find('#subject').val();
+  const message = $this.find('#message').val();
+  console.log({ query: $data });
+  console.log({ name, email, subject, message });
+
 
   $this.prevAll('.alert').remove();
-  console.log($action, $data, $this);
+
   // $.post($action, $data, function(data) {
 
   //   if (data.response == 'error') {
