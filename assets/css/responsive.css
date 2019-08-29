@@ -1,0 +1,316 @@
+/* Extremly small devices (phones, less than 768px) */
+
+@media (max-width: 480px) {
+	.chart-wrapper {
+		/* padding: 0 5px; */
+	}
+	.projects-section .column {
+		/* width: 100%; */
+	}
+	.skill-title {
+		width: 40%;
+	}
+	.progress {
+		width: 60%;
+	}
+}
+
+@media (max-width: 766px) {
+	.intro h1 {
+		font-size: 40px;
+		line-height: 40px;
+	}
+	.social-icons ul {
+		margin-left: 0;
+	}
+	.social-icons li {
+		padding: 0;
+	}
+	.social-icons a i {
+		margin: 0 5px;
+	}
+	.mouse-icon {
+		display: none;
+	}
+	.navbar-custom .navbar-brand, .navbar-custom .navbar-nav>li>a, .navbar-custom .navbar-nav .dropdown-menu>li>a {
+		padding: 10px 15px;
+	}
+	.navbar-custom .dropdown-menu {
+		margin-left: 20px;
+	}
+	/*about me section*/
+	.biography {
+		margin-top: 20px;
+		margin-bottom: 45px;
+	}
+	ul.list-check li {
+		width: 100%;
+	}
+	.download-button .btn {
+		margin-bottom: 20px;
+	}
+	.cv-section-bg {
+		padding: 40px 0;
+	}
+	.cv-text {
+		padding: 10px 0;
+	}
+	.view-button {
+		padding: 10px 0;
+	}
+	/*resume*/
+	.resume:before, .resume:after {
+		left: 1px;
+	}
+	/*skill section*/
+	.skill-title h3 {
+		font-size: 12px;
+	}
+	/*facts section*/
+	.count-wrap i {
+		font-size: 40px;
+	}
+	.count-wrap h3 {
+		font-size: 30px;
+		line-height: 16px;
+	}
+	.count-wrap p {
+		/* font-size: 10px; */
+		font-weight: 400;
+		line-height: 18px;
+	}
+	.count-wrap>div {
+		margin-bottom: 40px;
+	}
+	#filter li {
+		margin-bottom: 20px;
+	}
+	/*blog section*/
+	.blog-post-wrapper {
+		margin-bottom: 40px;
+	}
+	/*hire us section*/
+	.hire-section-bg {
+		padding: 104px 0;
+	}
+	.hire-section h2 {
+		line-height: 40px;
+	}
+	/*contact section*/
+	.contact-form {
+		margin-bottom: 40px;
+	}
+	.contact-section div>i {
+		float: none;
+		margin-right: 0;
+	}
+	.center-xs {
+		text-align: center;
+	}
+	.location-map {
+		margin-bottom: 45px;
+	}
+	/*service*/
+	.service-wrap>div {
+		margin-bottom: 100px;
+	}
+	.service-wrap>div:nth-child(4) {
+		margin-bottom: 0;
+	}
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+	.projects-section .column {
+		/* width: 50%;f */
+	}
+}
+
+/* Landscape Mobile */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	.intro h1 {
+		font-size: 60px;
+		line-height: 80px;
+	}
+	.social-icons ul {
+		margin-left: -5px;
+	}
+	.social-icons li {
+		padding: 0 5px;
+	}
+	.social-icons a i {
+		margin: 0 7px;
+	}
+	.mouse-icon {
+		display: none;
+	}
+	.navbar-custom .navbar-brand, .navbar-custom .navbar-nav>li>a, .navbar-custom .navbar-nav .dropdown-menu>li>a {
+		padding: 10px 15px;
+	}
+	.navbar-custom .dropdown-menu {
+		margin-left: 20px;
+	}
+	/*about me section*/
+	.biography {
+		margin-top: 20px;
+		margin-bottom: 45px;
+	}
+	ul.list-check li {
+		/* width: 50%; */
+	}
+	/*resume*/
+	.resume:before, .resume:after {
+		left: 1px;
+	}
+	/*skill section*/
+	.skill-title h3 {
+		font-size: 12px;
+	}
+	/*facts section*/
+
+	/* .count-wrap i {
+		font-size: 64px;
+	}
+	.count-wrap h3 {
+		font-size: 50px;
+		line-height: 28px;
+	}
+	.count-wrap p {
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 28px;
+	}
+	.count-wrap>div {
+		margin-bottom: 40px;
+	} */
+	/*blog section*/
+	.blog-post-wrapper {
+		margin-bottom: 40px;
+	}
+	/*hire us section*/
+	.hire-section h2 {
+		line-height: 40px;
+	}
+	/*contact section*/
+	.contact-form {
+		margin-bottom: 40px;
+	}
+	.contact-section .map-icon, .contact-section .mobile-icon {
+		float: none;
+	}
+	.center-xs {
+		text-align: center;
+	}
+	/*service*/
+	.service-wrap>div {
+		margin-bottom: 100px;
+	}
+	.service-wrap>div:nth-child(4) {
+		margin-bottom: 0;
+	}
+}
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.projects-section .column {
+		width: 33.33%;
+	}
+	.navbar-custom .navbar-brand {
+		padding: 10px 15px;
+	}
+	.navbar-custom .navbar-nav>li>a, .navbar-custom .navbar-nav .dropdown-menu>li>a {
+		font-size: 12px;
+		padding: 15px;
+	}
+	/*about me section*/
+	.biography {
+		margin-top: 20px;
+		margin-bottom: 45px;
+	}
+	.cv-section-bg {
+		padding: 40px 0;
+	}
+	.cv-text {
+		padding: 10px 0;
+	}
+	.view-button {
+		padding: 10px 0;
+	}
+	/*resume*/
+	.resume:before, .resume:after {
+		left: 0px;
+	}
+	/*skill section*/
+	.skill-title h3 {
+		font-size: 14px;
+	}
+	/*blog section*/
+	.blog-post-wrapper {
+		margin-bottom: 40px;
+	}
+	.entry-meta ul li {
+		padding: 0 5px;
+	}
+	/* hire sectio */
+	.hire-section-bg {
+		padding: 104px 0;
+	}
+	/*contact section*/
+	.location-map {
+		margin-bottom: 45px;
+	}
+	.contact-form {
+		margin-bottom: 40px;
+	}
+	.contact-section .map-icon, .contact-section .mobile-icon {
+		float: left;
+	}
+	.center-xs {
+		text-align: left;
+	}
+	.portfolio-item {
+		min-height: 162px;
+	}
+	/*service*/
+	.service-wrap>div {
+		margin-bottom: 100px;
+	}
+	.service-wrap>div:nth-child(3), .service-wrap>div:nth-child(4) {
+		margin-bottom: 0;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	.portfolio-item {
+		min-height: 150px;
+	}
+	.download-button a {
+		margin-right: 10px;
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) and (max-width: 1279px) {
+	.projects-section .column {
+		width: 25%;
+	}
+}
+
+/* Large devices (large desktops, 1280px and up) */
+
+@media screen and (min-width:1280px) and (max-width:1599px) {}
+
+/* Extra Large devices (large desktops, 1600px and up) */
+
+@media screen and (min-width:1600px) and (max-width:1920px) {
+	.personal-info {
+		padding-right: 180px;
+	}
+	.projects-section .column {
+		width: 25%;
+	}
+}
