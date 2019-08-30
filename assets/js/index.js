@@ -1,5 +1,19 @@
 /* eslint no-invalid-this: 0 */
 /* eslint no-unused-vars: 0 */
+import './jqueryLoader';
+import 'bootstrap';
+import Shuffle from 'shufflejs';
+import WOW from 'wow.js/dist/wow.js';
+
+/* jQuery plugins */
+import 'easy-pie-chart/dist/jquery.easypiechart';
+import 'jquery-inview';
+import 'jscroll';
+import 'jquery-lazy';
+
+new WOW({ mobile: false }).init();
+
+
 console.log('%c 🦄 Hello curious voyager! ',
   'background: black; color: #68c3a3');
 
@@ -17,9 +31,9 @@ $('#tt-preloader').delay(50).fadeOut('slow');
 // -------------------------------------------------------------
 $('.tt-fullHeight').height($(window).height());
 
-$(window).resize(function() {
-  $('.tt-fullHeight').height($(window).height());
-});
+// $(window).resize(function() {
+//   $('.tt-fullHeight').height($(window).height());
+// });
 
 // -------------------------------------------------------------
 // Menu
@@ -47,10 +61,9 @@ $('a[href*="#"]').bind('click', function(e) {
   }, 1000);
   // e.preventDefault();
 });
-const Wow = window.WOW;
-const wowInstance = new Wow({
-  mobile: false,
-}).init();
+
+// const Wow = window.WOW;
+
 
 // -------------------------------------------------------------
 // Countup
@@ -115,7 +128,7 @@ $('.main-skills').bind('inview',
 // -------------------------------------------------------------
 // Shuffle
 // -------------------------------------------------------------
-const Shuffle = window.Shuffle;
+// const Shuffle = window.Shuffle;
 Shuffle.options.isCentered = true;
 // Shuffle.options.useTransforms = true;
 const element = document.querySelector('.my-shuffle-container');
