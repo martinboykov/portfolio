@@ -46,18 +46,10 @@ a:focus, a:hover {
 
 /* .navbar a, .form-control { */
 .form-control {
-    -webkit-transition: all 0.4s ease-in-out 0s;
-    -moz-transition: all 0.4s ease-in-out 0s;
-    -ms-transition: all 0.4s ease-in-out 0s;
-    -o-transition: all 0.4s ease-in-out 0s;
     transition: all 0.4s ease-in-out 0s;
 }
 
 a, .btn {
-    -webkit-transition: all 0.125s ease-in-out 0s;
-    -moz-transition: all 0.125s ease-in-out 0s;
-    -ms-transition: all 0.125s ease-in-out 0s;
-    -o-transition: all 0.125s ease-in-out 0s;
     transition: all 0.125s ease-in-out 0s;
 }
 
@@ -65,7 +57,6 @@ a, .btn {
 /* ------------------------------------------------------ */
 
 .btn, .form-control, .form-control:hover, .form-control:focus, .navbar-custom .dropdown-menu {
-    -webkit-box-shadow: none;
     box-shadow: none;
 }
 
@@ -257,7 +248,7 @@ ul.list-check li::before {
 
 .section-title::after {
     content: "";
-    background: url(../../assets/images/section-divider.png) no-repeat 0 0;
+    background: url(../../images/section-divider.png) no-repeat 0 0;
     height: 15px;
     width: 113px;
     position: absolute;
@@ -280,7 +271,6 @@ ul.list-check li::before {
 #home {
     /* background: url(../images/home2.jpg) no-repeat center center; */
     background: no-repeat center center;
-    -webkit-background-attachment: fixed;
     background-attachment: fixed;
     background-color: #222;
     background-size: cover;
@@ -304,10 +294,6 @@ ul.list-check li::before {
     top: 50%;
     left: 0;
     text-align: center;
-    -webkit-transform: translate(0%, -50%);
-    -moz-transform: translate(0%, -50%);
-    -ms-transform: translate(0%, -50%);
-    -o-transform: translate(0%, -50%);
     transform: translate(0%, -50%);
     padding: 0 15px;
 }
@@ -375,14 +361,7 @@ SOCIAL ICON
     height: 40px;
     border: 1px solid #fff;
     border-radius: 3px;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
     transform: rotate(45deg);
-    -webkit-transition: all 300ms;
-    -moz-transition: all 300ms;
-    -o-transition: all 300ms;
     transition: all 300ms;
 }
 
@@ -451,9 +430,6 @@ SOCIAL ICON
     border-radius: 0;
     border-bottom: 3px double #ddd;
     background-color: #FFFFFF;
-    -webkit-transition: all 400ms;
-    -moz-transition: all 400ms;
-    -o-transition: all 400ms;
     transition: all 400ms;
 }
 
@@ -904,12 +880,6 @@ img {
 
 .hire-section-bg {
     padding: 115px 0;
-    background: -webkit-linear-gradient(bottom, #68C3A3, rgba(104, 195, 163, 0.7));
-    /*Safari 5.1-6*/
-    background: -o-linear-gradient(top, #68C3A3, rgba(104, 195, 163, 0.7));
-    /*Opera 11.1-12*/
-    background: -moz-linear-gradient(top, #68C3A3, rgba(104, 195, 163, 0.7));
-    /*Fx 3.6-15*/
     background: linear-gradient(to top, #68C3A3, rgba(104, 195, 163, 0.7));
     /*Standard*/
 }
@@ -1029,12 +999,7 @@ img {
 }
 
 .mouse-icon .wheel {
-    -webkit-animation-name: drop;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-delay: 0s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-play-state: running;
+
     animation-name: drop;
     animation-duration: 1s;
     animation-timing-function: linear;
@@ -1121,12 +1086,6 @@ img {
 }
 
 .fadeInUp {
-    -webkit-animation-name: fadeInUp;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-delay: 0s;
-    /* -webkit-animation-iteration-count: 1; */
-    /* -webkit-animation-play-state: running; */
     animation-name: fadeInUp;
     animation-duration: 1s;
     animation-timing-function: linear;
@@ -1138,12 +1097,10 @@ img {
 @-webkit-keyframes fadeInUp {
     0% {
         opacity: 0;
-        -webkit-transform: translate3d(0, 100%, 0);
         transform: translate3d(0, 100%, 0);
     }
     100% {
         opacity: 1;
-        -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
     }
 }
@@ -1151,12 +1108,10 @@ img {
 @keyframes fadeInUp {
     0% {
         opacity: 0;
-        -webkit-transform: translate3d(0, 100%, 0);
         transform: translate3d(0, 100%, 0);
     }
     100% {
         opacity: 1;
-        -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
     }
 }
