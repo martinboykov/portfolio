@@ -31,9 +31,9 @@ $('#tt-preloader').delay(50).fadeOut('slow');
 // -------------------------------------------------------------
 $('.tt-fullHeight').height($(window).height());
 
-// $(window).resize(function() {
-//   $('.tt-fullHeight').height($(window).height());
-// });
+$(window).resize(function() {
+  $('.tt-fullHeight').height($(window).height());
+});
 
 // -------------------------------------------------------------
 // Menu
@@ -43,7 +43,9 @@ $(document).click(function(event) {
   const $navbar = $('.navbar-collapse');
   const $opened = $navbar.hasClass('in');
   if ($opened === true
-    && $menu.has(event.target).length === 0) {
+    // close menu only if clicked outside of it
+    // && $menu.has(event.target).length === 0
+    ) {
     $navbar.collapse('hide');
   }
 });

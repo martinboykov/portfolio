@@ -1,8 +1,8 @@
 const gulp = require('gulp');
 const cssnano = require('gulp-cssnano');
 // const uglify = require('gulp-uglify');
-// const uglify = require('rollup-plugin-uglify');
-const uglify = require('gulp-uglify-es').default;
+const { uglify } = require('rollup-plugin-uglify');
+// const uglify = require('gulp-uglify-es').default;
 const autoprefixer = require('gulp-autoprefixer');
 // const minify = require('gulp-minify');
 const concat = require('gulp-concat');
@@ -74,9 +74,12 @@ gulp.task('js', function() {
     './assets/js/index.js',
   ])
     .pipe(rollup({
-      plugins: [babel(), resolve(), commonjs()],
+      plugins: [
+        babel({ exclude: 'node_modules/**' }),
+        resolve(), commonjs(), uglify(),
+      ],
     }, 'umd'))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(concat('app.min.js'))
     .pipe(gulp.dest('docs/assets/js'));
 });
