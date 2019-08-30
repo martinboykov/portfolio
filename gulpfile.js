@@ -84,11 +84,10 @@ gulp.task('html', ['css', 'css-fonts', 'js'], function() {
     './dist/assets/css/main/styles.min.css',
     './dist/assets/js/main/app.min.js',
   ]);
-  const target = gulp.src('./index.html');
+  const target = gulp.src('./dist/index.html');
 
   target.pipe(inject(sources))
-    .pipe(gulp.dest('./dist'))
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('./dist'));
 });
 
 // Cleaning/deleting files no longer being used in dist folder
