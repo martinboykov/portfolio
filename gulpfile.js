@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const cssnano = require('gulp-cssnano');
-const uglify = require('gulp-uglify');
+// const uglify = require('gulp-uglify');
+const uglify = require('gulp-uglify-es').default;
 const autoprefixer = require('gulp-autoprefixer');
 const minify = require('gulp-minify');
 const concat = require('gulp-concat');
@@ -65,12 +66,12 @@ gulp.task('js', function() {
     './assets/js/main/bootstrap.min.js',
     './assets/js/main/zepto.min.js',
     './assets/js/plugins/*.js',
-    './assets/js/custom/index.js',
+    './assets/js/custom/*.js',
   ])
     .pipe(concat('app.js'))
     .pipe(size({ title: 'js' }))
     // .pipe(gulp.dest('dist/assets/js'))
-    .pipe(minify())
+    .pipe(uglify())
     .pipe(rename('app.min.js'))
     .pipe(size({ title: 'js.min' }))
     .pipe(gulp.dest('dist/assets/js/main'))
