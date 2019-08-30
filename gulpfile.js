@@ -70,8 +70,8 @@ gulp.task('js', function() {
     .pipe(concat('app.js'))
     .pipe(size({ title: 'js' }))
     // .pipe(gulp.dest('dist/assets/js'))
-    .pipe(rename('app.min.js'))
     .pipe(minify())
+    .pipe(rename('app.min.js'))
     .pipe(size({ title: 'js.min' }))
     .pipe(gulp.dest('dist/assets/js/main'))
     .pipe(browserSync.stream());
