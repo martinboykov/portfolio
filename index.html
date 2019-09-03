@@ -11,13 +11,12 @@
 				content="onepage, resume, CV HTML ">
 
 	<title>Martin Martinov Portfolio</title>
-
-	<link href='./assets/css/fonts/fonts.min.css'
-				rel='stylesheet'
-				type='text/css'>
-	<link href='./assets/css/main/styles.min.css'
-				rel='stylesheet'
-				type='text/css'>
+	<link rel="stylesheet"
+				href="./assets/css/fonts/fonts.min.css">
+	<link rel="stylesheet"
+				href="./assets/css/vendor/vendor.min.css">
+	<link rel="stylesheet"
+				href="./assets/css/custom/styles.min.css">
 	<link rel="shortcut icon"
 				href="./assets/images/ico/favicon.png">
 </head>
@@ -126,12 +125,9 @@
 						<p>I enjoy using my obsessive attention to detail and my unequivocal love for making
 							things to create innovative, accessible and fast websites.
 						</p>
-
 					</div>
 					<div class="short-info wow fadeInUp">
-
-						<h3>What I do?</h3>
-
+						<h3>My toolbox?</h3>
 						<div class="row">
 							<div class="col-md-12 col-lg-6">
 								<ul class="list-check">
@@ -139,14 +135,16 @@
 									<li>CSS Preprocessors</li>
 									<li>Responsive and Mobile Design</li>
 									<li>Cross-Browser Development</li>
+									<li>Git and Version Control Systems</li>
 								</ul>
 							</div>
 							<div class="col-md-12 col-lg-6">
 								<ul class="list-check">
+									<li>Object-oriented programming</li>
+									<li>Data Structures and Algorithms</li>
 									<li>RESTful Services and APIs</li>
 									<li>Testing and Debugging</li>
-									<li>Git and Version Control Systems</li>
-									<li>Data Structures and Algorithms</li>
+									<li>Deployment</li>
 								</ul>
 							</div>
 						</div>
@@ -238,23 +236,13 @@
 					</div>
 				</div>
 			</div>
+
+
+
+
 			<div class="row other-skills count-wrap">
 				<div class="col-md-6 ">
 					<h3 class="tech-title">Front-End Skills</h3>
-					<div class="skill-progress">
-						<div class="skill-title">
-							<h4>jQuery</h4>
-						</div>
-						<div class="progress">
-							<div class="progress-bar six-sec-ease-in-out"
-									 role="progressbar"
-									 aria-valuenow="75"
-									 aria-valuemin="0"
-									 aria-valuemax="100">
-								<span class="timer">75</span>
-							</div>
-						</div>
-					</div>
 					<div class="skill-progress">
 						<div class="skill-title">
 							<h4>Webpack</h4>
@@ -272,6 +260,20 @@
 					<div class="skill-progress">
 						<div class="skill-title">
 							<h4>Gulp</h4>
+						</div>
+						<div class="progress">
+							<div class="progress-bar six-sec-ease-in-out"
+									 role="progressbar"
+									 aria-valuenow="75"
+									 aria-valuemin="0"
+									 aria-valuemax="100">
+								<span class="timer">75</span>
+							</div>
+						</div>
+					</div>
+					<div class="skill-progress">
+						<div class="skill-title">
+							<h4>jQuery</h4>
 						</div>
 						<div class="progress">
 							<div class="progress-bar six-sec-ease-in-out"
@@ -313,19 +315,19 @@
 					</div>
 					<div class="skill-progress">
 						<div class="skill-title">
-							<h4>CSS</h4>
+							<h4>HTML, CSS, DOM</h4>
 						</div>
 						<div class="progress">
 							<div class="progress-bar six-sec-ease-in-out"
 									 role="progressbar"
-									 aria-valuenow="75"
+									 aria-valuenow="100"
 									 aria-valuemin="0"
 									 aria-valuemax="100">
-								<span class="timer">75</span>
+								<span class="timer">100</span>
 							</div>
 						</div>
 					</div>
-					<div class="skill-progress">
+					<!-- <div class="skill-progress">
 						<div class="skill-title">
 							<h4>DOM</h4>
 						</div>
@@ -352,7 +354,7 @@
 								<span class="timer">100</span>
 							</div>
 						</div>
-					</div>
+					</div> -->
 				</div>
 				<!-- /.col-md-6 -->
 
@@ -462,134 +464,305 @@
 	</section>
 	<!-- End Facts Section -->
 
+	<!-- Button trigger modal -->
+
+
+	<!-- Modal -->
+	<div class="modal "
+			 id="myModal"
+			 tabindex="-1"
+			 role="dialog"
+			 aria-labelledby="myModalLabel">
+		<div class="modal-dialog"
+				 role="document">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<button type="button"
+									class="close"
+									data-dismiss="modal"
+									aria-label="Close"><span aria-hidden="true">×</span></button>
+					<h4 class="modal-title"
+							id="myModalLabel">TheNewsroom</h4>
+				</div>
+				<div class="modal-body">
+					<h4>Text in a modal</h4>
+					<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+
+					<h4>Popover in a modal</h4>
+					<p>This <a href="#"
+							 role="button"
+							 class="btn btn-default popover-test"
+							 title=""
+							 data-content="And here's some amazing content. It's very engaging. right?"
+							 data-original-title="A Title">button</a> should trigger a popover on click.</p>
+
+					<h4>Tooltips in a modal</h4>
+					<p><a href="#"
+							 class="tooltip-test"
+							 title=""
+							 data-original-title="Tooltip">This link</a> and <a href="#"
+							 class="tooltip-test"
+							 title=""
+							 data-original-title="Tooltip">that link</a> should have tooltips on hover.</p>
+					<hr>
+					<h4>Overflowing text to show scroll behavior</h4>
+					<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
+						quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+					<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue
+						laoreet rutrum faucibus dolor auctor.</p>
+				</div>
+				<!-- <div class="modal-footer">
+					<button type="button"
+									class="btn btn-success"
+									data-dismiss="modal">Close</button>
+				</div> -->
+
+			</div>
+		</div>
+	</div>
+	</div>
+
 	<!-- Projects Section -->
 	<section id="projects"
 					 class="projects-section text-center section-padding">
 		<div class="container">
 			<h2 class="section-title wow fadeInUp">Projects</h2>
-			<div class="row">
-				<div class="col">
-					<div class="filters-group">
-						<div class="btn-group filter-options">
-							<button class="btn btn-primary shuffle-button"
-											data-group="all">All</button>
-							<button class="btn btn-primary shuffle-button"
-											data-group="education">Education</button>
-							<button class="btn btn-primary shuffle-button"
-											data-group="production">Production</button>
-							<button class="btn btn-primary shuffle-button"
-											data-group="mean">MEAN Stack</button>
-							<button class="btn btn-primary shuffle-button"
-											data-group="angular">Angular</button>
-							<button class="btn btn-primary shuffle-button"
-											data-group="nodejs">Node.js</button>
+			<div class="filters-group">
+				<div class="btn-group filter-options buttons">
+					<button class="btn btn-success shuffle-button active"
+									data-group="all">All</button>
+					<button class="btn btn-success shuffle-button"
+									data-group="javaScript">JavaScript</button>
+					<button class="btn btn-success shuffle-button"
+									data-group="jquery">jQuery</button>
+					<button class="btn btn-success shuffle-button"
+									data-group="angular">Angular</button>
+					<button class="btn btn-success shuffle-button"
+									data-group="nodejs">Node.js</button>
+					<button class="btn btn-success shuffle-button"
+									data-group="mean">MEAN</button>
+
+				</div>
+				<div class="filter-group filter-options radio">
+					<div class="row">
+
+						<div class="col-xs-6 col-sm-4 col-md-2 shuffle-wrapper">
+							<label class="shuffle-container">
+								<span class="text">All</span>
+								<input type="radio"
+											 class="shuffle-radio"
+											 checked="true"
+											 value="all"
+											 name="radio">
+								<span class="checkmark"></span>
+							</label>
 						</div>
+						<div class="col-xs-6 col-sm-4 col-md-2 shuffle-wrapper">
+							<label class="shuffle-container">
+								<span class="text">JavaScript</span>
+								<input type="radio"
+											 class="shuffle-radio"
+											 value="javascript"
+											 name="radio">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="col-xs-6 col-sm-4 col-md-2 shuffle-wrapper">
+							<label class="shuffle-container">
+								<span class="text">jQuery</span>
+								<input type="radio"
+											 class="shuffle-radio"
+											 value="jquery"
+											 name="radio">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="col-xs-6 col-sm-4 col-md-2 shuffle-wrapper">
+							<label class="shuffle-container">
+								<span class="text">Angular</span>
+								<input type="radio"
+											 class="shuffle-radio"
+											 value="angular"
+											 name="radio">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="col-xs-6 col-sm-4 col-md-2 shuffle-wrapper">
+							<label class="shuffle-container">
+								<span class="text">Node.js</span>
+								<input type="radio"
+											 class="shuffle-radio"
+											 value="nodejs"
+											 name="radio">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="col-xs-6 col-sm-4 col-md-2 shuffle-wrapper">
+							<label class="shuffle-container">
+								<span class="text">MEAN</span>
+								<input type="radio"
+											 class="shuffle-radio"
+											 value="mean"
+											 name="radio">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+
 					</div>
 				</div>
 			</div>
 
+
 			<div class="row my-shuffle-container">
 				<div class="picture-item column"
-						 data-groups='["angular", "education"]'
+						 data-groups='["angular"]'
 						 data-date-created="2016-08-12"
 						 data-title="Crocodile">
 					<div class="aspect aspect--16x9">
 						<div class="aspect__inner">
-							<img class="lazy"
+							<img class="image lazy"
 									 data-src="./assets/images/works/portfolio-1.jpg"
 									 alt="A close, profile view of a crocodile looking directly into the camera" />
+							<div class="img-overlay ">
+								<button class=" btn btn-success text-center"
+												data-toggle="modal"
+												data-target="#myModal">Show Details
+							</div>
 						</div>
+						<!-- <a type="button"
+								 data-toggle="modal"
+								 data-target="#myModal">
+								<div class="img-overlay">
+									<div class="text">Show Details</div>
+								</div>
+							</a> -->
 					</div>
 				</div>
+
 				<div class="picture-item column"
-						 data-groups='["nodejs", "education"]'
+						 data-groups='["nodejs"]'
 						 data-date-created="2016-06-09"
 						 data-title="Crossroads">
 					<div class="aspect aspect--16x9">
 						<div class="aspect__inner">
-							<img class="lazy"
+							<img class="image lazy"
 									 data-src="./assets/images/works/portfolio-2.jpg"
 									 alt="A multi-level highway stack interchange in Puxi, Shanghai" />
+							<div class="img-overlay ">
+								<button class=" btn btn-success text-center"
+												data-toggle="modal"
+												data-target="#myModal">Show Details
+							</div>
 						</div>
 					</div>
 				</div>
+
 				<div class="picture-item column"
-						 data-groups='["mean","angular","nodejs", "production"]'
+						 data-groups='["mean","angular","nodejs"]'
 						 data-date-created="2015-10-20"
 						 data-title="Central Park">
 					<div class="aspect aspect--16x9">
 						<div class="aspect__inner">
-							<img class="lazy"
+							<img class="image lazy"
 									 data-src="./assets/images/works/portfolio-3.jpg"
 									 alt="Looking down on central park and the surrounding builds from the Rockefellar Center" />
+							<div class="img-overlay ">
+								<button class=" btn btn-success text-center"
+												data-toggle="modal"
+												data-target="#myModal">Show Details
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="picture-item column"
-						 data-groups='["nodejs","education"]'
+						 data-groups='["nodejs"]'
 						 data-date-created="2015-10-20"
 						 data-title="Central Park">
 					<div class="aspect aspect--16x9">
 						<div class="aspect__inner">
-							<img class="lazy"
+							<img class="image lazy"
 									 data-src="./assets/images/works/portfolio-4.jpg"
 									 alt="Looking down on central park and the surrounding builds from the Rockefellar Center" />
+							<div class="img-overlay ">
+								<button class=" btn btn-success text-center"
+												data-toggle="modal"
+												data-target="#myModal">Show Details
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="picture-item column"
-						 data-groups='["nodejs","education"]'
+						 data-groups='["nodejs"]'
 						 data-date-created="2015-10-20"
 						 data-title="Central Park">
 					<div class="aspect aspect--16x9">
 						<div class="aspect__inner">
-							<img class="lazy"
+							<img class="image lazy"
 									 data-src="./assets/images/works/portfolio-5.jpg"
 									 alt="Looking down on central park and the surrounding builds from the Rockefellar Center" />
+							<div class="img-overlay ">
+								<button class=" btn btn-success text-center"
+												data-toggle="modal"
+												data-target="#myModal">Show Details
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="picture-item column"
-						 data-groups='["angular", "education"]'
+						 data-groups='["angular"]'
 						 data-date-created="2015-10-20"
 						 data-title="Central Park">
 					<div class="aspect aspect--16x9">
 						<div class="aspect__inner">
-							<img class="lazy"
+							<img class="image lazy"
 									 data-src="./assets/images/works/portfolio-6.jpg"
 									 alt="Looking down on central park and the surrounding builds from the Rockefellar Center" />
+							<div class="img-overlay ">
+								<button class=" btn btn-success text-center"
+												data-toggle="modal"
+												data-target="#myModal">Show Details
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="picture-item column"
-						 data-groups='["angular", "education"]'
+						 data-groups='["angular"]'
 						 data-date-created="2016-08-12"
 						 data-title="Crocodile">
 					<div class="aspect aspect--16x9">
 						<div class="aspect__inner">
-							<img class="lazy"
+							<img class="image lazy"
 									 data-src="./assets/images/works/portfolio-7.jpg"
 									 alt="A close, profile view of a crocodile looking directly into the camera" />
+							<div class="img-overlay ">
+								<button class=" btn btn-success text-center"
+												data-toggle="modal"
+												data-target="#myModal">Show Details
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="picture-item column"
-						 data-groups='["angular", "education"]'
+						 data-groups='["angular"]'
 						 data-date-created="2015-10-20"
 						 data-title="Central Park">
 					<div class="aspect aspect--16x9">
 						<div class="aspect__inner">
-							<img class="lazy"
+							<img class="image lazy"
 									 data-src="./assets/images/works/portfolio-8.jpg"
 									 alt="Looking down on central park and the surrounding builds from the Rockefellar Center" />
+							<div class="img-overlay ">
+								<button class=" btn btn-success text-center"
+												data-toggle="modal"
+												data-target="#myModal">Show Details
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-1@sm my-sizer-element"></div>
 			</div>
-
+			<div class="col-1@sm my-sizer-element"></div>
 		</div>
-
 	</section>
 	<!-- End Work Section -->
 
@@ -688,7 +861,7 @@
 
 							<button type="submit"
 											name="submit"
-											class="btn btn-primary">Send Message</button>
+											class="btn btn-success">Send Message</button>
 						</form>
 					</div>
 				</div>
@@ -718,8 +891,7 @@
 	<div class="scroll-up">
 		<a href="#home"><i class="fa fa-angle-up"></i></a>
 	</div>
-
-	<script src="./assets/js/app.min.js"></script>
+	<script src="./assets/js/index.js"></script>
 </body>
 
 </html>

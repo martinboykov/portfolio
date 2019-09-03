@@ -17,11 +17,26 @@ new WOW({ mobile: false }).init();
 console.log('%c 🦄 Hello curious voyager! ',
   'background: black; color: #68c3a3');
 
+
+let isMobile = false; // initiate as false
+const regex = new RegExp(
+  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i);
+
+// device detection
+if (regex.test(navigator.userAgent)) {
+  isMobile = true;
+}
+
+
 /* ---------------------------------------------- /*
  * Preloader
 /* ---------------------------------------------- */
 
-$('.lazy').lazy();
+// $('.lazy').lazy();
+$('.lazy').lazy({
+  combined: true,
+  delay: 2000,
+});
 
 $('#pre-status').fadeOut();
 $('#tt-preloader').delay(50).fadeOut('slow');
@@ -33,6 +48,10 @@ $('.tt-fullHeight').height($(window).height());
 
 $(window).resize(function() {
   $('.tt-fullHeight').height($(window).height());
+
+  // modal
+  $('.modal-dialog').css('margin-top', calculateMarginTop());
+  adjustModalPosition();
 });
 
 // -------------------------------------------------------------
@@ -45,7 +64,7 @@ $(document).click(function(event) {
   if ($opened === true
     // close menu only if clicked outside of it
     // && $menu.has(event.target).length === 0
-    ) {
+  ) {
     $navbar.collapse('hide');
   }
 });
@@ -143,15 +162,89 @@ const shuffleInstance = new Shuffle(element, {
 /* reshuffle when user clicks a filter item */
 $('.shuffle-button').bind('click', function(e) {
   const anchor = $(this);
+  anchor.addClass('active');
+  $('.shuffle-button').not(this).removeClass('active');
   const query = anchor.attr('data-group');
   if (query === 'all') shuffleInstance.filter();
   shuffleInstance.filter(query);
+  $(`.shuffle-radio[value=${query}]`).prop('checked', true);
 });
+
+$('.shuffle-radio').bind('change', function(e) {
+  $('.shuffle-radio').not(this).prop('checked', false);
+  const anchor = $(this);
+  const query = anchor.attr('value');
+  if ($(this).is(':checked')) {
+    if (query === 'all') shuffleInstance.filter();
+    shuffleInstance.filter(query);
+  } else {
+    shuffleInstance.filter();
+  }
+  $(`.shuffle-button`).removeClass('active');
+  $(`.shuffle-button[data-group=${query}]`).addClass('active');
+});
+
+if (isMobile) {
+  $('.picture-item .img-overlay').css('opacity', '1');
+  $('.picture-item .btn-success')
+    .css('background-color', 'rgba(41, 41, 41, 0.289)');
+}
+
+// -------------------------------------------------------------
+// Modal
+// -------------------------------------------------------------
+// detect browser scroll bar width
+function getScrollBarWidth() {
+  const $outer = $('<div>').css({
+    visibility: 'hidden', width: 100, overflow: 'scroll',
+  }).appendTo('body');
+  const widthWithScroll =
+    $('<div>').css({ width: '100%' }).appendTo($outer).outerWidth();
+  $outer.remove();
+  return 100 - widthWithScroll;
+}
+function calculateMarginTop() {
+  const windowHeight = $(window).height() - $('header').height();
+  const height = $('.modal-dialog').height();
+  const marginTop = Math.ceil((windowHeight - height) / 2) + $('header').height();
+  return marginTop;
+}
+function adjustModalPosition() {
+  if ($('.modal-dialog').height() < $(window).height() - $('header').height()) {
+    $('.modal-dialog').css({
+      'margin-top': calculateMarginTop(), 'display': 'block',
+    });
+  } else {
+    $('.modal-dialog').css({
+      'margin-top': $('header').height() + 10, 'display': 'block',
+    });
+  }
+}
+
+$(document)
+  .on('hidden.bs.modal', '.modal', function(evt) {
+    // use margin-right 0 for IE8
+    $(document.body).css('margin-right', '');
+  })
+  .on('show.bs.modal', '.modal', function() {
+    // When modal is shown, scrollbar on body disappears.  In order not
+    // to experience a "shifting" effect, replace the scrollbar width
+    // with a right-margin on the body.
+    $('.modal-dialog').css('display', 'none');
+    if ($(window).height() < $(document).height()) {
+      $('.modal-dialog').css('left', Math.ceil(getScrollBarWidth() / 2));
+    }
+  })
+  .on('shown.bs.modal', '.modal', function() {
+    console.log($('.modal-dialog').height());
+    adjustModalPosition();
+  });
 
 // -------------------------------------------------------------
 // Back To Top
 // -------------------------------------------------------------
 
+// button that triggers going to top of the page
 $(window).scroll(function() {
   if ($(this).scrollTop() > 100) {
     $('.scroll-up').fadeIn();
@@ -161,18 +254,21 @@ $(window).scroll(function() {
 });
 
 
-let isMobile = false; // initiate as false
-const regex = new RegExp(
-  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i);
+// let isMapLoaded = false;
 
-// device detection
-if (regex.test(navigator.userAgent)) {
-  isMobile = true;
-}
+// if (isMobile) $('.location-map').css('display', 'none');
+// setTimeout(() => {
+//   if (!isMapLoaded && !isMobile) {
+//     loadAPI();
+//   } else {
+//     // $('.location-map').css('display', 'none');
+//   }
+// }, 5000);
 
 $('.location-map').bind('inview',
   function(event, visible, visiblePartX, visiblePartY) {
     if (visible && !isMobile) {
+      // if (!isMapLoaded) loadAPI();
       loadAPI();
       $(this).unbind('inview');
     } else {
@@ -180,6 +276,7 @@ $('.location-map').bind('inview',
     }
   });
 function loadAPI() {
+  // isMapLoaded = true;
   $.ajax({
     url: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyA3bPGZhH-iD28-Bpht14BiGhun_Pc3iSU',
     type: 'GET',
@@ -188,8 +285,7 @@ function loadAPI() {
 
     success: function(result, status, xhr) {
       const Google = window.google;
-      const myLatLng = { lat: 42.669, lng: 23.280 };
-
+      const myLatLng = { lat: 42.669290, lng: 23.279843 };
       const map = new Google.maps.Map(
         document.body.querySelector('.location-map'), {
           center: myLatLng,

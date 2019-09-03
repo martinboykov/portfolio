@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "",
+  "description": "my personal portfolio",
   "main": "index.js",
   "scripts": {},
   "repository": {
