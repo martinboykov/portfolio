@@ -11,13 +11,12 @@
 				content="onepage, resume, CV HTML ">
 
 	<title>Martin Martinov Portfolio</title>
-
-	<link href='./assets/css/fonts/fonts.min.css'
-				rel='stylesheet'
-				type='text/css'>
-	<link href='./assets/css/main/styles.min.css'
-				rel='stylesheet'
-				type='text/css'>
+	<link rel="stylesheet"
+				href="./assets/css/fonts/fonts.min.css">
+	<!-- <link rel="stylesheet"
+				href="./assets/css/vendor/vendor.min.css"> -->
+	<link rel="stylesheet"
+				href="./assets/css/custom/styles.min.css">
 	<link rel="shortcut icon"
 				href="./assets/images/ico/favicon.png">
 </head>
@@ -79,7 +78,7 @@
 			<!-- <h3 style="color:white">Web developer - frontend &amp; backend development</h3> -->
 			<!-- <p style="font-style: italic; font-size: 24px;">frontend &amp; backend development</p> -->
 			<p>Web Developer <br>
-				Front-End and Back-End Development</p>
+				</p>
 			<div class="social-icons">
 				<ul class="list-inline">
 					<li><a href="https://www.github.com/martinboykov"
@@ -126,12 +125,9 @@
 						<p>I enjoy using my obsessive attention to detail and my unequivocal love for making
 							things to create innovative, accessible and fast websites.
 						</p>
-
 					</div>
 					<div class="short-info wow fadeInUp">
-
-						<h3>What I do?</h3>
-
+						<h3>My toolbox:</h3>
 						<div class="row">
 							<div class="col-md-12 col-lg-6">
 								<ul class="list-check">
@@ -139,14 +135,16 @@
 									<li>CSS Preprocessors</li>
 									<li>Responsive and Mobile Design</li>
 									<li>Cross-Browser Development</li>
+									<li>Git and Version Control Systems</li>
 								</ul>
 							</div>
 							<div class="col-md-12 col-lg-6">
 								<ul class="list-check">
+									<li>Object-oriented programming</li>
+									<li>Data Structures and Algorithms</li>
 									<li>RESTful Services and APIs</li>
 									<li>Testing and Debugging</li>
-									<li>Git and Version Control Systems</li>
-									<li>Data Structures and Algorithms</li>
+									<li>Deployment</li>
 								</ul>
 							</div>
 						</div>
@@ -175,7 +173,8 @@
 					<div class="col-md-6">
 						<div class="view-button">
 							<a class="btn btn-default btn-lg"
-								 href="#"><i class="fa fa-external-link"></i>My Resume</a>
+								 href="https://github.com/martinboykov/resume/raw/master/Martin_Martinov_CV.pdf"
+								 target="_blank"><i class="fa fa-external-link"></i>My Resume</a>
 						</div>
 					</div>
 				</div>
@@ -238,23 +237,13 @@
 					</div>
 				</div>
 			</div>
+
+
+
+
 			<div class="row other-skills count-wrap">
 				<div class="col-md-6 ">
 					<h3 class="tech-title">Front-End Skills</h3>
-					<div class="skill-progress">
-						<div class="skill-title">
-							<h4>jQuery</h4>
-						</div>
-						<div class="progress">
-							<div class="progress-bar six-sec-ease-in-out"
-									 role="progressbar"
-									 aria-valuenow="75"
-									 aria-valuemin="0"
-									 aria-valuemax="100">
-								<span class="timer">75</span>
-							</div>
-						</div>
-					</div>
 					<div class="skill-progress">
 						<div class="skill-title">
 							<h4>Webpack</h4>
@@ -272,6 +261,20 @@
 					<div class="skill-progress">
 						<div class="skill-title">
 							<h4>Gulp</h4>
+						</div>
+						<div class="progress">
+							<div class="progress-bar six-sec-ease-in-out"
+									 role="progressbar"
+									 aria-valuenow="75"
+									 aria-valuemin="0"
+									 aria-valuemax="100">
+								<span class="timer">75</span>
+							</div>
+						</div>
+					</div>
+					<div class="skill-progress">
+						<div class="skill-title">
+							<h4>jQuery</h4>
 						</div>
 						<div class="progress">
 							<div class="progress-bar six-sec-ease-in-out"
@@ -313,35 +316,7 @@
 					</div>
 					<div class="skill-progress">
 						<div class="skill-title">
-							<h4>CSS</h4>
-						</div>
-						<div class="progress">
-							<div class="progress-bar six-sec-ease-in-out"
-									 role="progressbar"
-									 aria-valuenow="75"
-									 aria-valuemin="0"
-									 aria-valuemax="100">
-								<span class="timer">75</span>
-							</div>
-						</div>
-					</div>
-					<div class="skill-progress">
-						<div class="skill-title">
-							<h4>DOM</h4>
-						</div>
-						<div class="progress">
-							<div class="progress-bar six-sec-ease-in-out"
-									 role="progressbar"
-									 aria-valuenow="75"
-									 aria-valuemin="0"
-									 aria-valuemax="100">
-								<span class="timer">75</span>
-							</div>
-						</div>
-					</div>
-					<div class="skill-progress">
-						<div class="skill-title">
-							<h4>HTML5</h4>
+							<h4>HTML, CSS, DOM</h4>
 						</div>
 						<div class="progress">
 							<div class="progress-bar six-sec-ease-in-out"
@@ -462,134 +437,277 @@
 	</section>
 	<!-- End Facts Section -->
 
+	<!-- Button trigger modal -->
+
+
+	<!-- Modal -->
+	<!-- Modal-TheNewsroom -->
+	<div class="modal "
+			 id="modal-thenewsroom"
+			 tabindex="-1"
+			 role="dialog"
+			 aria-labelledby="modalTheNewsroomLabel">
+		<div class="modal-dialog"
+				 role="document">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<button type="button"
+									class="close"
+									data-dismiss="modal"
+									aria-label="Close"><span aria-hidden="true">×</span></button>
+					<div class="modal-title">
+						<h4 id="modalTheNewsroomLabel">TheNewsroom</h4>
+						<a href="https://thenewsroom-mean-app.appspot.com/"
+							 target="_blank">
+							<i class="fa fa-globe"></i>
+						</a>
+						<a href="https://github.com/martinboykov/TheNewsroom"
+							 target="_blank">
+							<i class="fa fa-github"></i>
+						</a>
+					</div>
+				</div>
+				<div class="modal-body">
+					<h4>Description</h4>
+					<p>TheNewsroom is Web Application for creation and delivery the latest news in different areas of life: local,
+						worldwide, sports, movies, music, cars, technology and more.</p>
+					<h4>Feautures</h4>
+					<p>CRUD, authentication, authorization, role management, admin
+						panel, WYSIWYG Editor, image upload, infinity-scroll, pagination</p>
+					<h4>Technologies</h4>
+					<p>MEAN Stack - MongoDB, Express, Angular, Node.js</p>
+					<h4></h4>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal "
+			 id="modal-snapit"
+			 tabindex="-1"
+			 role="dialog"
+			 aria-labelledby="mmodalSnapITLabel">
+		<div class="modal-dialog"
+				 role="document">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<button type="button"
+									class="close"
+									data-dismiss="modal"
+									aria-label="Close"><span aria-hidden="true">×</span></button>
+					<div class="modal-title">
+						<h4 id="mmodalSnapITLabel">SnapIT</h4>
+						<a href="https://snapit-768ca.firebaseapp.com/home"
+							 target="_blank">
+							<i class="fa fa-globe"></i>
+						</a>
+						<a href="https://github.com/martinboykov/SnapIT"
+							 target="_blank">
+							<i class="fa fa-github"></i>
+						</a>
+					</div>
+				</div>
+				<div class="modal-body">
+					<h4>Description</h4>
+					<p>SnapIT is a photographer’s platform for showcasing their work.</p>
+					<h4>Feautures</h4>
+					<p>CRUD, authentication, authorization, image-upload, infinity-scroll</p>
+					<h4>Technologies</h4>
+					<p>Angular, Firebase, Infinity-scroll</p>
+					<h4></h4>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal "
+			 id="modal-portfolio"
+			 tabindex="-1"
+			 role="dialog"
+			 aria-labelledby="mmodalProtfolioLabel">
+		<div class="modal-dialog"
+				 role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button"
+									class="close"
+									data-dismiss="modal"
+									aria-label="Close"><span aria-hidden="true">×</span></button>
+					<div class="modal-title">
+						<h4 id="mmodalProtfolioLabel">Portfolio</h4>
+						<a href="https://martinboykov.github.io/portfolio/"
+							 target="_blank">
+							<i class="fa fa-globe"></i>
+						</a>
+						<a href="https://github.com/martinboykov/portfolio"
+							 target="_blank">
+							<i class="fa fa-github"></i>
+						</a>
+					</div>
+				</div>
+				<div class="modal-body">
+					<h4>Description</h4>
+					<p>Protfolio is a developer’s platform for showcasing their abilities and work.</p>
+					<h4>Feautures</h4>
+					<p>Lazy-loading, responsive design, animations</p>
+					<h4>Technologies</h4>
+					<p>jQuery, Bootstrap, Gulp, Rollup</p>
+					<h4></h4>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<!-- Projects Section -->
 	<section id="projects"
 					 class="projects-section text-center section-padding">
 		<div class="container">
 			<h2 class="section-title wow fadeInUp">Projects</h2>
-			<div class="row">
-				<div class="col">
-					<div class="filters-group">
-						<div class="btn-group filter-options">
-							<button class="btn btn-primary shuffle-button"
-											data-group="all">All</button>
-							<button class="btn btn-primary shuffle-button"
-											data-group="education">Education</button>
-							<button class="btn btn-primary shuffle-button"
-											data-group="production">Production</button>
-							<button class="btn btn-primary shuffle-button"
-											data-group="mean">MEAN Stack</button>
-							<button class="btn btn-primary shuffle-button"
-											data-group="angular">Angular</button>
-							<button class="btn btn-primary shuffle-button"
-											data-group="nodejs">Node.js</button>
+			<div class="filters-group">
+				<div class="btn-group filter-options buttons">
+					<button class="btn btn-success shuffle-button active"
+									data-group="all">All</button>
+					<button class="btn btn-success shuffle-button"
+									data-group="javascript">JavaScript</button>
+					<button class="btn btn-success shuffle-button"
+									data-group="jquery">jQuery</button>
+					<button class="btn btn-success shuffle-button"
+									data-group="angular">Angular</button>
+					<button class="btn btn-success shuffle-button"
+									data-group="nodejs">Node.js</button>
+					<button class="btn btn-success shuffle-button"
+									data-group="mean">MEAN</button>
+
+				</div>
+				<div class="filter-group filter-options radio">
+					<div class="row">
+
+						<div class="col-xs-6 col-sm-4 col-md-2 shuffle-wrapper">
+							<label class="shuffle-container">
+								<span class="text">All</span>
+								<input type="radio"
+											 class="shuffle-radio"
+											 checked="true"
+											 value="all"
+											 name="radio">
+								<span class="checkmark"></span>
+							</label>
 						</div>
+						<div class="col-xs-6 col-sm-4 col-md-2 shuffle-wrapper">
+							<label class="shuffle-container">
+								<span class="text">JavaScript</span>
+								<input type="radio"
+											 class="shuffle-radio"
+											 value="javascript"
+											 name="radio">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="col-xs-6 col-sm-4 col-md-2 shuffle-wrapper">
+							<label class="shuffle-container">
+								<span class="text">jQuery</span>
+								<input type="radio"
+											 class="shuffle-radio"
+											 value="jquery"
+											 name="radio">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="col-xs-6 col-sm-4 col-md-2 shuffle-wrapper">
+							<label class="shuffle-container">
+								<span class="text">Angular</span>
+								<input type="radio"
+											 class="shuffle-radio"
+											 value="angular"
+											 name="radio">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="col-xs-6 col-sm-4 col-md-2 shuffle-wrapper">
+							<label class="shuffle-container">
+								<span class="text">Node.js</span>
+								<input type="radio"
+											 class="shuffle-radio"
+											 value="nodejs"
+											 name="radio">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="col-xs-6 col-sm-4 col-md-2 shuffle-wrapper">
+							<label class="shuffle-container">
+								<span class="text">MEAN</span>
+								<input type="radio"
+											 class="shuffle-radio"
+											 value="mean"
+											 name="radio">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+
 					</div>
 				</div>
 			</div>
+
 
 			<div class="row my-shuffle-container">
 				<div class="picture-item column"
-						 data-groups='["angular", "education"]'
-						 data-date-created="2016-08-12"
-						 data-title="Crocodile">
+						 data-groups='["angular", "nodejs", "javascript", "mean"]'
+						 data-date-created="2019"
+						 data-title="TheNewsroom">
 					<div class="aspect aspect--16x9">
 						<div class="aspect__inner">
-							<img class="lazy"
-									 data-src="./assets/images/works/portfolio-1.jpg"
-									 alt="A close, profile view of a crocodile looking directly into the camera" />
+							<img class="image lazy"
+									 data-src="./assets/images/works/TheNewsroom.jpg"
+									 alt="View of main page of the website TheNewsroom" />
+							<div class="img-overlay ">
+								<button class=" btn btn-success text-center"
+												data-toggle="modal"
+												data-target="#modal-thenewsroom">Show Details
+							</div>
 						</div>
 					</div>
 				</div>
+
 				<div class="picture-item column"
-						 data-groups='["nodejs", "education"]'
-						 data-date-created="2016-06-09"
-						 data-title="Crossroads">
+						 data-groups='["angular","javascript"]'
+						 data-date-created="2017-09"
+						 data-title="SnapIT">
 					<div class="aspect aspect--16x9">
 						<div class="aspect__inner">
-							<img class="lazy"
-									 data-src="./assets/images/works/portfolio-2.jpg"
-									 alt="A multi-level highway stack interchange in Puxi, Shanghai" />
+							<img class="image lazy"
+									 data-src="./assets/images/works/SnapIT.jpg"
+									 alt="View of home section of the website SnapIT" />
+							<div class="img-overlay ">
+								<button class=" btn btn-success text-center"
+												data-toggle="modal"
+												data-target="#modal-snapit">Show Details
+							</div>
 						</div>
 					</div>
 				</div>
+
 				<div class="picture-item column"
-						 data-groups='["mean","angular","nodejs", "production"]'
-						 data-date-created="2015-10-20"
-						 data-title="Central Park">
+						 data-groups='["jquery","javascript"]'
+						 data-date-created="2019-09"
+						 data-title="Portfolio">
 					<div class="aspect aspect--16x9">
 						<div class="aspect__inner">
-							<img class="lazy"
-									 data-src="./assets/images/works/portfolio-3.jpg"
-									 alt="Looking down on central park and the surrounding builds from the Rockefellar Center" />
+							<img class="image lazy"
+									 data-src="./assets/images/works/Portfolio.jpg"
+									 alt="View of home section of portfolio website" />
+							<div class="img-overlay ">
+								<button class=" btn btn-success text-center"
+												data-toggle="modal"
+												data-target="#modal-portfolio">Show Details
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="picture-item column"
-						 data-groups='["nodejs","education"]'
-						 data-date-created="2015-10-20"
-						 data-title="Central Park">
-					<div class="aspect aspect--16x9">
-						<div class="aspect__inner">
-							<img class="lazy"
-									 data-src="./assets/images/works/portfolio-4.jpg"
-									 alt="Looking down on central park and the surrounding builds from the Rockefellar Center" />
-						</div>
-					</div>
-				</div>
-				<div class="picture-item column"
-						 data-groups='["nodejs","education"]'
-						 data-date-created="2015-10-20"
-						 data-title="Central Park">
-					<div class="aspect aspect--16x9">
-						<div class="aspect__inner">
-							<img class="lazy"
-									 data-src="./assets/images/works/portfolio-5.jpg"
-									 alt="Looking down on central park and the surrounding builds from the Rockefellar Center" />
-						</div>
-					</div>
-				</div>
-				<div class="picture-item column"
-						 data-groups='["angular", "education"]'
-						 data-date-created="2015-10-20"
-						 data-title="Central Park">
-					<div class="aspect aspect--16x9">
-						<div class="aspect__inner">
-							<img class="lazy"
-									 data-src="./assets/images/works/portfolio-6.jpg"
-									 alt="Looking down on central park and the surrounding builds from the Rockefellar Center" />
-						</div>
-					</div>
-				</div>
-				<div class="picture-item column"
-						 data-groups='["angular", "education"]'
-						 data-date-created="2016-08-12"
-						 data-title="Crocodile">
-					<div class="aspect aspect--16x9">
-						<div class="aspect__inner">
-							<img class="lazy"
-									 data-src="./assets/images/works/portfolio-7.jpg"
-									 alt="A close, profile view of a crocodile looking directly into the camera" />
-						</div>
-					</div>
-				</div>
-				<div class="picture-item column"
-						 data-groups='["angular", "education"]'
-						 data-date-created="2015-10-20"
-						 data-title="Central Park">
-					<div class="aspect aspect--16x9">
-						<div class="aspect__inner">
-							<img class="lazy"
-									 data-src="./assets/images/works/portfolio-8.jpg"
-									 alt="Looking down on central park and the surrounding builds from the Rockefellar Center" />
-						</div>
-					</div>
-				</div>
-				<div class="col-1@sm my-sizer-element"></div>
 			</div>
-
+			<div class="col-1@sm my-sizer-element"></div>
 		</div>
-
 	</section>
 	<!-- End Work Section -->
 
@@ -603,8 +721,6 @@
 				<div class="row">
 					<div class="col-md-12">
 						<h2>Available for hire</h2>
-						<!-- <a href="#contact"
-							 class="btn btn-default">Get in touch</a> -->
 					</div>
 				</div>
 			</div>
@@ -612,10 +728,39 @@
 	</section>
 	<!-- End Hire Section -->
 
-
-
 	<!-- Contact Section -->
 	<section id="contact"
+					 class="contact-section section-padding">
+		<div class="container">
+			<h2 class="section-title wow fadeInUp">Get in touch</h2>
+
+			<div class="row text-center">
+
+				<div class="col-md-12 col-lg-4">
+					<!-- <div class="wrapper"></div> -->
+					<i class="fa fa-map-marker"></i>
+					<address>
+						1680 Sofia, Bulgaria<br>
+					</address>
+				</div>
+				<div class="col-md-12 col-lg-4">
+					<!-- <div class="wrapper"></div> -->
+					<i class="fa fa-mobile"></i>
+					<div class="contact-number">
+						(+359) 887-600-384
+					</div>
+				</div>
+				<div class="col-md-12 col-lg-4">
+					<!-- <div class="wrapper"> </div> -->
+					<i class="fa fa-envelope"></i>
+					<div class="contact-email">
+						<a href="mailto:m.boykov.martinov@gmail.com">m.boykov.martinov@gmail.com</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- <section id="contact"
 					 class="contact-section section-padding">
 		<div class="container">
 			<h2 class="section-title wow fadeInUp">Get in touch</h2>
@@ -688,14 +833,14 @@
 
 							<button type="submit"
 											name="submit"
-											class="btn btn-primary">Send Message</button>
+											class="btn btn-success">Send Message</button>
 						</form>
 					</div>
 				</div>
 			</div>
 		</div>
 		</div>
-	</section>
+	</section> -->
 
 	<!-- End Contact Section -->
 
@@ -718,7 +863,6 @@
 	<div class="scroll-up">
 		<a href="#home"><i class="fa fa-angle-up"></i></a>
 	</div>
-
 	<script src="./assets/js/app.min.js"></script>
 </body>
 
