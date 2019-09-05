@@ -16,7 +16,7 @@
   },
   "homepage": "https://github.com/martinboykov/portfolio",
   "dependencies": {
-    "bootstrap": "^3.3.5",
+    "bootstrap": "^3.4.1",
     "easy-pie-chart": "^2.1.7",
     "jquery": "^3.4.1",
     "jquery-inview": "^1.1.2",
