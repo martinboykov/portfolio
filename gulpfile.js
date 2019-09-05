@@ -32,8 +32,6 @@ gulp.task('fonts', function() {
     .pipe(gulp.dest('docs/assets/fonts/bootstrap'));
   gulp.src('./assets/fonts/fontawesome/*')
     .pipe(gulp.dest('docs/assets/fonts/fontawesome'));
-  gulp.src('./assets/fonts/Roboto/*')
-    .pipe(gulp.dest('docs/assets/fonts/Roboto'));
 });
 
 gulp.task('images', function() {
@@ -64,15 +62,17 @@ gulp.task('css-dev', function() {
     .pipe(rename('fonts.min.css'))
     .pipe(gulp.dest('docs/assets/css/fonts'));
 
+  // gulp.src([
+  //   './assets/css/vendor/bootstrap.css',
+  //   './assets/css/vendor/font-awesome.min.css',
+  // ])
+  //   .pipe(concat('vendor.min.css'))
+  //   .pipe(autoprefixer('last 2 versions'))
+  //   .pipe(gulp.dest('docs/assets/css/vendor'));
+
   gulp.src([
     './assets/css/vendor/bootstrap.css',
     './assets/css/vendor/font-awesome.min.css',
-  ])
-    .pipe(concat('vendor.min.css'))
-    .pipe(autoprefixer('last 2 versions'))
-    .pipe(gulp.dest('docs/assets/css/vendor'));
-
-  gulp.src([
     './assets/css/custom/style.css',
     './assets/css/custom/responsive.css',
   ])
@@ -93,6 +93,7 @@ gulp.task('js-dev', function() {
       ],
     }, 'umd'))
     .pipe(sourcemaps.write())
+    .pipe(concat('app.min.js'))
     .pipe(gulp.dest('docs/assets/js'));
 });
 
@@ -133,7 +134,7 @@ gulp.task('css-prod', function() {
     .pipe(size({ title: 'styles.css' }))
     .pipe(cssnano())
     .pipe(size({ title: 'styles.min.css' }))
-    .pipe(gulp.dest('docs/assets/css/main'));
+    .pipe(gulp.dest('docs/assets/css/custom'));
 
   gulp.src([
     './assets/css/fonts/*',

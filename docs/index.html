@@ -13,8 +13,8 @@
 	<title>Martin Martinov Portfolio</title>
 	<link rel="stylesheet"
 				href="./assets/css/fonts/fonts.min.css">
-	<link rel="stylesheet"
-				href="./assets/css/vendor/vendor.min.css">
+	<!-- <link rel="stylesheet"
+				href="./assets/css/vendor/vendor.min.css"> -->
 	<link rel="stylesheet"
 				href="./assets/css/custom/styles.min.css">
 	<link rel="shortcut icon"
@@ -78,7 +78,7 @@
 			<!-- <h3 style="color:white">Web developer - frontend &amp; backend development</h3> -->
 			<!-- <p style="font-style: italic; font-size: 24px;">frontend &amp; backend development</p> -->
 			<p>Web Developer <br>
-				Front-End and Back-End Development</p>
+				</p>
 			<div class="social-icons">
 				<ul class="list-inline">
 					<li><a href="https://www.github.com/martinboykov"
@@ -328,34 +328,6 @@
 							</div>
 						</div>
 					</div>
-					<!-- <div class="skill-progress">
-						<div class="skill-title">
-							<h4>DOM</h4>
-						</div>
-						<div class="progress">
-							<div class="progress-bar six-sec-ease-in-out"
-									 role="progressbar"
-									 aria-valuenow="75"
-									 aria-valuemin="0"
-									 aria-valuemax="100">
-								<span class="timer">75</span>
-							</div>
-						</div>
-					</div>
-					<div class="skill-progress">
-						<div class="skill-title">
-							<h4>HTML5</h4>
-						</div>
-						<div class="progress">
-							<div class="progress-bar six-sec-ease-in-out"
-									 role="progressbar"
-									 aria-valuenow="100"
-									 aria-valuemin="0"
-									 aria-valuemax="100">
-								<span class="timer">100</span>
-							</div>
-						</div>
-					</div> -->
 				</div>
 				<!-- /.col-md-6 -->
 
@@ -469,11 +441,12 @@
 
 
 	<!-- Modal -->
+	<!-- Modal-TheNewsroom -->
 	<div class="modal "
-			 id="myModal"
+			 id="modal-thenewsroom"
 			 tabindex="-1"
 			 role="dialog"
-			 aria-labelledby="myModalLabel">
+			 aria-labelledby="modalTheNewsroomLabel">
 		<div class="modal-dialog"
 				 role="document">
 			<div class="modal-content">
@@ -483,45 +456,108 @@
 									class="close"
 									data-dismiss="modal"
 									aria-label="Close"><span aria-hidden="true">×</span></button>
-					<h4 class="modal-title"
-							id="myModalLabel">TheNewsroom</h4>
+					<div class="modal-title">
+						<h4 id="modalTheNewsroomLabel">TheNewsroom</h4>
+						<a href="https://thenewsroom-mean-app.appspot.com/"
+							 target="_blank">
+							<i class="fa fa-globe"></i>
+						</a>
+						<a href="https://github.com/martinboykov/TheNewsroom"
+							 target="_blank">
+							<i class="fa fa-github"></i>
+						</a>
+					</div>
 				</div>
 				<div class="modal-body">
-					<h4>Text in a modal</h4>
-					<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
-
-					<h4>Popover in a modal</h4>
-					<p>This <a href="#"
-							 role="button"
-							 class="btn btn-default popover-test"
-							 title=""
-							 data-content="And here's some amazing content. It's very engaging. right?"
-							 data-original-title="A Title">button</a> should trigger a popover on click.</p>
-
-					<h4>Tooltips in a modal</h4>
-					<p><a href="#"
-							 class="tooltip-test"
-							 title=""
-							 data-original-title="Tooltip">This link</a> and <a href="#"
-							 class="tooltip-test"
-							 title=""
-							 data-original-title="Tooltip">that link</a> should have tooltips on hover.</p>
-					<hr>
-					<h4>Overflowing text to show scroll behavior</h4>
-					<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
-						quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-					<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue
-						laoreet rutrum faucibus dolor auctor.</p>
+					<h4>Description</h4>
+					<p>TheNewsroom is Web Application for creation and delivery the latest news in different areas of life: local,
+						worldwide, sports, movies, music, cars, technology and more.</p>
+					<h4>Feautures</h4>
+					<p>CRUD, authentication, authorization, role management, admin
+						panel, WYSIWYG Editor, image upload, infinity-scroll, pagination</p>
+					<h4>Technologies</h4>
+					<p>MEAN Stack - MongoDB, Express, Angular, Node.js</p>
+					<h4></h4>
 				</div>
-				<!-- <div class="modal-footer">
-					<button type="button"
-									class="btn btn-success"
-									data-dismiss="modal">Close</button>
-				</div> -->
-
 			</div>
 		</div>
 	</div>
+
+	<div class="modal "
+			 id="modal-snapit"
+			 tabindex="-1"
+			 role="dialog"
+			 aria-labelledby="mmodalSnapITLabel">
+		<div class="modal-dialog"
+				 role="document">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<button type="button"
+									class="close"
+									data-dismiss="modal"
+									aria-label="Close"><span aria-hidden="true">×</span></button>
+					<div class="modal-title">
+						<h4 id="mmodalSnapITLabel">SnapIT</h4>
+						<a href="https://snapit-768ca.firebaseapp.com/home"
+							 target="_blank">
+							<i class="fa fa-globe"></i>
+						</a>
+						<a href="https://github.com/martinboykov/SnapIT"
+							 target="_blank">
+							<i class="fa fa-github"></i>
+						</a>
+					</div>
+				</div>
+				<div class="modal-body">
+					<h4>Description</h4>
+					<p>SnapIT is a photographer’s platform for showcasing their work.</p>
+					<h4>Feautures</h4>
+					<p>CRUD, authentication, authorization, image-upload, infinity-scroll</p>
+					<h4>Technologies</h4>
+					<p>Angular, Firebase, Infinity-scroll</p>
+					<h4></h4>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal "
+			 id="modal-portfolio"
+			 tabindex="-1"
+			 role="dialog"
+			 aria-labelledby="mmodalProtfolioLabel">
+		<div class="modal-dialog"
+				 role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button"
+									class="close"
+									data-dismiss="modal"
+									aria-label="Close"><span aria-hidden="true">×</span></button>
+					<div class="modal-title">
+						<h4 id="mmodalProtfolioLabel">Portfolio</h4>
+						<a href="https://martinboykov.github.io/portfolio/"
+							 target="_blank">
+							<i class="fa fa-globe"></i>
+						</a>
+						<a href="https://github.com/martinboykov/portfolio"
+							 target="_blank">
+							<i class="fa fa-github"></i>
+						</a>
+					</div>
+				</div>
+				<div class="modal-body">
+					<h4>Description</h4>
+					<p>Protfolio is a developer’s platform for showcasing their abilities and work.</p>
+					<h4>Feautures</h4>
+					<p>Lazy-loading, responsive design, animations</p>
+					<h4>Technologies</h4>
+					<p>jQuery, Bootstrap, Gulp, Rollup</p>
+					<h4></h4>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<!-- Projects Section -->
@@ -534,7 +570,7 @@
 					<button class="btn btn-success shuffle-button active"
 									data-group="all">All</button>
 					<button class="btn btn-success shuffle-button"
-									data-group="javaScript">JavaScript</button>
+									data-group="javascript">JavaScript</button>
 					<button class="btn btn-success shuffle-button"
 									data-group="jquery">jQuery</button>
 					<button class="btn btn-success shuffle-button"
@@ -617,146 +653,54 @@
 
 			<div class="row my-shuffle-container">
 				<div class="picture-item column"
-						 data-groups='["angular"]'
-						 data-date-created="2016-08-12"
-						 data-title="Crocodile">
+						 data-groups='["angular", "nodejs", "javascript", "mean"]'
+						 data-date-created="2019"
+						 data-title="TheNewsroom">
 					<div class="aspect aspect--16x9">
 						<div class="aspect__inner">
 							<img class="image lazy"
-									 data-src="./assets/images/works/portfolio-1.jpg"
-									 alt="A close, profile view of a crocodile looking directly into the camera" />
+									 data-src="./assets/images/works/TheNewsroom.jpg"
+									 alt="View of main page of the website TheNewsroom" />
 							<div class="img-overlay ">
 								<button class=" btn btn-success text-center"
 												data-toggle="modal"
-												data-target="#myModal">Show Details
-							</div>
-						</div>
-						<!-- <a type="button"
-								 data-toggle="modal"
-								 data-target="#myModal">
-								<div class="img-overlay">
-									<div class="text">Show Details</div>
-								</div>
-							</a> -->
-					</div>
-				</div>
-
-				<div class="picture-item column"
-						 data-groups='["nodejs"]'
-						 data-date-created="2016-06-09"
-						 data-title="Crossroads">
-					<div class="aspect aspect--16x9">
-						<div class="aspect__inner">
-							<img class="image lazy"
-									 data-src="./assets/images/works/portfolio-2.jpg"
-									 alt="A multi-level highway stack interchange in Puxi, Shanghai" />
-							<div class="img-overlay ">
-								<button class=" btn btn-success text-center"
-												data-toggle="modal"
-												data-target="#myModal">Show Details
+												data-target="#modal-thenewsroom">Show Details
 							</div>
 						</div>
 					</div>
 				</div>
 
 				<div class="picture-item column"
-						 data-groups='["mean","angular","nodejs"]'
-						 data-date-created="2015-10-20"
-						 data-title="Central Park">
+						 data-groups='["angular","javascript"]'
+						 data-date-created="2017-09"
+						 data-title="SnapIT">
 					<div class="aspect aspect--16x9">
 						<div class="aspect__inner">
 							<img class="image lazy"
-									 data-src="./assets/images/works/portfolio-3.jpg"
-									 alt="Looking down on central park and the surrounding builds from the Rockefellar Center" />
+									 data-src="./assets/images/works/SnapIT.jpg"
+									 alt="View of home section of the website SnapIT" />
 							<div class="img-overlay ">
 								<button class=" btn btn-success text-center"
 												data-toggle="modal"
-												data-target="#myModal">Show Details
+												data-target="#modal-snapit">Show Details
 							</div>
 						</div>
 					</div>
 				</div>
+
 				<div class="picture-item column"
-						 data-groups='["nodejs"]'
-						 data-date-created="2015-10-20"
-						 data-title="Central Park">
+						 data-groups='["jquery","javascript"]'
+						 data-date-created="2019-09"
+						 data-title="Portfolio">
 					<div class="aspect aspect--16x9">
 						<div class="aspect__inner">
 							<img class="image lazy"
-									 data-src="./assets/images/works/portfolio-4.jpg"
-									 alt="Looking down on central park and the surrounding builds from the Rockefellar Center" />
+									 data-src="./assets/images/works/Portfolio.jpg"
+									 alt="View of home section of portfolio website" />
 							<div class="img-overlay ">
 								<button class=" btn btn-success text-center"
 												data-toggle="modal"
-												data-target="#myModal">Show Details
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="picture-item column"
-						 data-groups='["nodejs"]'
-						 data-date-created="2015-10-20"
-						 data-title="Central Park">
-					<div class="aspect aspect--16x9">
-						<div class="aspect__inner">
-							<img class="image lazy"
-									 data-src="./assets/images/works/portfolio-5.jpg"
-									 alt="Looking down on central park and the surrounding builds from the Rockefellar Center" />
-							<div class="img-overlay ">
-								<button class=" btn btn-success text-center"
-												data-toggle="modal"
-												data-target="#myModal">Show Details
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="picture-item column"
-						 data-groups='["angular"]'
-						 data-date-created="2015-10-20"
-						 data-title="Central Park">
-					<div class="aspect aspect--16x9">
-						<div class="aspect__inner">
-							<img class="image lazy"
-									 data-src="./assets/images/works/portfolio-6.jpg"
-									 alt="Looking down on central park and the surrounding builds from the Rockefellar Center" />
-							<div class="img-overlay ">
-								<button class=" btn btn-success text-center"
-												data-toggle="modal"
-												data-target="#myModal">Show Details
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="picture-item column"
-						 data-groups='["angular"]'
-						 data-date-created="2016-08-12"
-						 data-title="Crocodile">
-					<div class="aspect aspect--16x9">
-						<div class="aspect__inner">
-							<img class="image lazy"
-									 data-src="./assets/images/works/portfolio-7.jpg"
-									 alt="A close, profile view of a crocodile looking directly into the camera" />
-							<div class="img-overlay ">
-								<button class=" btn btn-success text-center"
-												data-toggle="modal"
-												data-target="#myModal">Show Details
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="picture-item column"
-						 data-groups='["angular"]'
-						 data-date-created="2015-10-20"
-						 data-title="Central Park">
-					<div class="aspect aspect--16x9">
-						<div class="aspect__inner">
-							<img class="image lazy"
-									 data-src="./assets/images/works/portfolio-8.jpg"
-									 alt="Looking down on central park and the surrounding builds from the Rockefellar Center" />
-							<div class="img-overlay ">
-								<button class=" btn btn-success text-center"
-												data-toggle="modal"
-												data-target="#myModal">Show Details
+												data-target="#modal-portfolio">Show Details
 							</div>
 						</div>
 					</div>
@@ -777,16 +721,12 @@
 				<div class="row">
 					<div class="col-md-12">
 						<h2>Available for hire</h2>
-						<!-- <a href="#contact"
-							 class="btn btn-default">Get in touch</a> -->
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- End Hire Section -->
-
-
 
 	<!-- Contact Section -->
 	<section id="contact"
@@ -796,21 +736,21 @@
 
 			<div class="row text-center">
 
-				<div class="col-xs-12 col-sm-4">
+				<div class="col-md-12 col-lg-4">
 					<!-- <div class="wrapper"></div> -->
 					<i class="fa fa-map-marker"></i>
 					<address>
 						1680 Sofia, Bulgaria<br>
 					</address>
 				</div>
-				<div class="col-xs-12 col-sm-4">
+				<div class="col-md-12 col-lg-4">
 					<!-- <div class="wrapper"></div> -->
 					<i class="fa fa-mobile"></i>
 					<div class="contact-number">
 						(+359) 887-600-384
 					</div>
 				</div>
-				<div class="col-xs-12 col-sm-4">
+				<div class="col-md-12 col-lg-4">
 					<!-- <div class="wrapper"> </div> -->
 					<i class="fa fa-envelope"></i>
 					<div class="contact-email">
@@ -923,7 +863,7 @@
 	<div class="scroll-up">
 		<a href="#home"><i class="fa fa-angle-up"></i></a>
 	</div>
-	<script src="./assets/js/index.js"></script>
+	<script src="./assets/js/app.min.js"></script>
 </body>
 
 </html>

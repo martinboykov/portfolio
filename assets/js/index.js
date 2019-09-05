@@ -37,21 +37,22 @@ $('.lazy').lazy({
   combined: true,
   delay: 2000,
 });
-
 $('#pre-status').fadeOut();
 $('#tt-preloader').delay(50).fadeOut('slow');
+
 
 // -------------------------------------------------------------
 // Full Screen Slider
 // -------------------------------------------------------------
+
 $('.tt-fullHeight').height($(window).height());
 
 $(window).resize(function() {
   $('.tt-fullHeight').height($(window).height());
 
   // modal
-  $('.modal-dialog').css('margin-top', calculateMarginTop());
-  adjustModalPosition();
+  // $('.modal-dialog').css('margin-top', calculateMarginTop());
+  // adjustModalPosition();
 });
 
 // -------------------------------------------------------------
@@ -72,16 +73,24 @@ $(document).click(function(event) {
 // -------------------------------------------------------------
 // Animated scrolling
 // -------------------------------------------------------------
+// checks if ie or edge
+function ieVersion(uaString) {
+  uaString = uaString || navigator.userAgent;
+  const match = /\b(MSIE |Trident.*?rv:|Edge\/)(\d+)/.exec(uaString);
+  if (match) return parseInt(match[2], 10);
+  return null;
+}
+if (!ieVersion()) {
+  $('body').scrollspy({ target: '.navbar' });
 
-$('body').scrollspy({ target: '.navbar' });
-
-$('a[href*="#"]').bind('click', function(e) {
-  const anchor = $(this);
-  $('html, body').stop().animate({
-    scrollTop: $(anchor.attr('href')).offset().top,
-  }, 1000);
-  // e.preventDefault();
-});
+  $('a[href*="#"]').bind('click', function(e) {
+    const anchor = $(this);
+    $('html, body').stop().animate({
+      scrollTop: $(anchor.attr('href')).offset().top,
+    }, 1000);
+    // e.preventDefault();
+  });
+}
 
 // const Wow = window.WOW;
 
@@ -203,24 +212,6 @@ function getScrollBarWidth() {
   $outer.remove();
   return 100 - widthWithScroll;
 }
-function calculateMarginTop() {
-  const windowHeight = $(window).height() - $('header').height();
-  const height = $('.modal-dialog').height();
-  const marginTop =
-    Math.ceil((windowHeight - height) / 2) + $('header').height();
-  return marginTop;
-}
-function adjustModalPosition() {
-  if ($('.modal-dialog').height() < $(window).height() - $('header').height()) {
-    $('.modal-dialog').css({
-      'margin-top': calculateMarginTop(), 'display': 'block',
-    });
-  } else {
-    $('.modal-dialog').css({
-      'margin-top': $('header').height() + 10, 'display': 'block',
-    });
-  }
-}
 
 $(document)
   .on('hidden.bs.modal', '.modal', function(evt) {
@@ -228,16 +219,16 @@ $(document)
     $(document.body).css('margin-right', '');
   })
   .on('show.bs.modal', '.modal', function() {
-    // When modal is shown, scrollbar on body disappears.  In order not
-    // to experience a "shifting" effect, replace the scrollbar width
-    // with a right-margin on the body.
-    $('.modal-dialog').css('display', 'none');
-    if ($(window).height() < $(document).height()) {
-      $('.modal-dialog').css('left', Math.ceil(getScrollBarWidth() / 2));
-    }
+    // ...
   })
-  .on('shown.bs.modal', '.modal', function() {
-    adjustModalPosition();
+  .on('shown.bs.modal', '.modal.in', function() {
+    $('.modal-dialog').css('left', Math.ceil(getScrollBarWidth() / 2));
+    $('.modal.in').css({
+      'display': 'flex',
+      'justify-content': 'center',
+      'align-items': 'flex-start',
+      'margin-top': '70px',
+    });
   });
 
 // -------------------------------------------------------------
