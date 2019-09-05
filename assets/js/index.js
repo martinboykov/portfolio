@@ -206,7 +206,8 @@ function getScrollBarWidth() {
 function calculateMarginTop() {
   const windowHeight = $(window).height() - $('header').height();
   const height = $('.modal-dialog').height();
-  const marginTop = Math.ceil((windowHeight - height) / 2) + $('header').height();
+  const marginTop =
+    Math.ceil((windowHeight - height) / 2) + $('header').height();
   return marginTop;
 }
 function adjustModalPosition() {
@@ -236,7 +237,6 @@ $(document)
     }
   })
   .on('shown.bs.modal', '.modal', function() {
-    console.log($('.modal-dialog').height());
     adjustModalPosition();
   });
 

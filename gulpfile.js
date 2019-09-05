@@ -113,9 +113,9 @@ gulp.task('html-dev', function() {
 
 gulp.task('watch', function() {
   gulp.watch(['./assets/js/**/*.js'], ['js-dev']);
-  gulp.watch(['./assets/css/**/*.css'], ['css-dev']);
+  gulp.watch(['./assets/css/custom/**/*.css'], ['css-dev']);
   gulp.watch(['./assets/images/**/*'], ['images']);
-  gulp.watch(['./**/*.html'], ['html-dev']);
+  gulp.watch(['./index.html'], ['html-dev']);
   console.log('Watching for changes');
 });
 // ---------------------------------

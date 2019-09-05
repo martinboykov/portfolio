@@ -3,7 +3,7 @@
 body {
     position: relative;
     height: 100%;
-    min-width: 320px;
+    min-width: 340px;
     font-family: 'Roboto', sans-serif;
     line-height: 28px;
     font-weight: 300;
@@ -806,13 +806,13 @@ SOCIAL ICON
         flex-wrap: wrap;
 }
 
-
-
 /* Radio buttons  */
+
 .filter-options.radio {
     color: black;
 }
-.shuffle-wrapper{
+
+.shuffle-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -824,6 +824,7 @@ SOCIAL ICON
         -ms-flex-pack: center;
             justify-content: center;
 }
+
 .shuffle-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -845,20 +846,23 @@ SOCIAL ICON
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
-  }
+}
 
-  /* Hide the browser's default radio button */
-  .shuffle-container input {
+/* Hide the browser's default radio button */
+
+.shuffle-container input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
-  }
+}
 
-  /* Create a custom radio button */
-  .shuffle-container .text{
-      padding: 10px 20px;
-  }
-  .checkmark {
+/* Create a custom radio button */
+
+.shuffle-container .text {
+    padding: 10px 20px;
+}
+
+.checkmark {
     position: absolute;
     top: 0;
     left: 10px;
@@ -868,46 +872,47 @@ SOCIAL ICON
     /* background-color: #eee; */
     background-color: rgba(41, 41, 41, 0.089);
     border-radius: 50%;
+}
 
-  }
+/* On mouse-over, add a grey background color */
 
-  /* On mouse-over, add a grey background color */
-  .shuffle-container:hover input ~ .checkmark {
+.shuffle-container:hover input~.checkmark {
     /* background-color: #ccc; */
     /* background-color: rgba(41, 41, 41, 0.486); */
-  }
+}
 
-  /* When the radio button is checked, add a blue background */
-  .shuffle-container input:checked ~ .checkmark {
+/* When the radio button is checked, add a blue background */
+
+.shuffle-container input:checked~.checkmark {
     background-color: #68c3a3;
-  }
+}
 
-  /* Create the indicator (the dot/circle - hidden when not checked) */
-  .checkmark:after {
+/* Create the indicator (the dot/circle - hidden when not checked) */
+
+.checkmark:after {
     content: "";
     position: absolute;
     display: none;
-  }
+}
 
-  /* Show the indicator (dot/circle) when checked */
-  .shuffle-container input:checked ~ .checkmark:after {
+/* Show the indicator (dot/circle) when checked */
+
+.shuffle-container input:checked~.checkmark:after {
     display: inline-block;
-  }
+}
 
-  /* Style the indicator (dot/circle) */
-  .shuffle-container .checkmark:after {
-       top: 9px;
-      left: 9px;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: white;
-  }
+/* Style the indicator (dot/circle) */
+
+.shuffle-container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
 
 /* RADIO  */
-
-
-
 
 .my-shuffle {
     position: relative;
@@ -959,6 +964,8 @@ SOCIAL ICON
 
 .picture-item:hover .image {
     opacity: 0.3;
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
 }
 
 .picture-item:hover .img-overlay {
@@ -976,6 +983,10 @@ SOCIAL ICON
             backface-visibility: hidden;
     -o-object-fit: cover;
        object-fit: cover;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
 .img-overlay {
@@ -999,10 +1010,14 @@ SOCIAL ICON
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     border: none;
+    background-color: rgba(41, 41, 41, 0.289);
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
+    font-size: 12px;
 }
 
 .img-overlay button:hover:active, .img-overlay button:hover, .img-overlay button:active, .img-overlay button:active:focus, .img-overlay button:focus {
     border: none;
+    background-color: rgba(41, 41, 41, 0.389);
 }
 
 *, ::before, ::after {
@@ -1112,6 +1127,67 @@ body.modal-open {
 /* ---------------------------------------------- */
 
 .contact-section {}
+.contact-section .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.contact-section strong {
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.contact-form strong {
+    /* margin-bottom: 40px; */
+    display: inline-block;
+}
+
+.contact-form textarea.form-control {
+    height: 115px;
+}
+
+.contact-form .btn {
+    margin-top: 15px;
+}
+
+.contact-section div>i {
+    text-align: center;
+    display: inline-block;
+    font-size: 45px;
+    /* margin-right: 20px; */
+}
+.contact-section .fa-envelope {
+    line-height: 45px;
+    font-size: 35px;
+    /* margin-right: 20px; */
+}
+
+.contact-section address, .contact-section .contact-number, .contact-section .contact-email {
+    /* overflow: hidden; */
+    line-height: 30px;
+    font-weight: 400;
+    margin-bottom: 45px;
+    color:black;
+}
+.contact-section .contact-email a{
+    cursor: pointer;
+    color: black;
+}
+
+/* with map and email form */
+
+/* .contact-section {}
 
 .contact-section strong {
     display: block;
@@ -1141,7 +1217,7 @@ body.modal-open {
     line-height: 30px;
     font-weight: 400;
     margin-bottom: 45px
-}
+} */
 
 /* ---------------------------------------------- /*
 /* === MAP === */
