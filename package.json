@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "my personal portfolio",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "gulp": "gulp"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/martinboykov/portfolio.git"
@@ -16,7 +18,7 @@
   },
   "homepage": "https://github.com/martinboykov/portfolio",
   "dependencies": {
-    "bootstrap": "^3.3.5",
+    "bootstrap": "^3.4.1",
     "easy-pie-chart": "^2.1.7",
     "jquery": "^3.4.1",
     "jquery-inview": "^1.1.2",
@@ -50,6 +52,6 @@
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-uglify": "^6.0.3"
+    "rollup-plugin-uglify": "^6.0.4"
   }
 }

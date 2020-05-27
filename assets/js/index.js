@@ -279,9 +279,9 @@ function loadAPI() {
       const myLatLng = { lat: 42.669290, lng: 23.279843 };
       const map = new Google.maps.Map(
         document.body.querySelector('.location-map'), {
-          center: myLatLng,
-          zoom: 11,
-        });
+        center: myLatLng,
+        zoom: 11,
+      });
       const marker = new Google.maps.Marker({
         position: myLatLng,
         map: map,
