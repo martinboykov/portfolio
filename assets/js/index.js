@@ -59,16 +59,18 @@ $(window).resize(function() {
 // Menu
 // -------------------------------------------------------------
 const $menu = $('.navbar-custom');
-$(document).click(function(event) {
-  const $navbar = $('.navbar-collapse');
-  const $opened = $navbar.hasClass('in');
-  if ($opened === true
+const $navbar = $('.navbar-collapse');
+$(document).click(function(e) {
+  if (!$menu.is(e.target)
     // close menu only if clicked outside of it
-    // && $menu.has(event.target).length === 0
+    && $menu.has(event.target).length === 0
   ) {
-    $navbar.collapse('hide');
+    $navbar.slideUp();
   }
 });
+$menu.click(function() {
+  $navbar.slideToggle();
+})
 
 // -------------------------------------------------------------
 // Animated scrolling
@@ -298,20 +300,20 @@ function loadAPI() {
 // Contact Form
 // -------------------------------------------------------------
 
-$('#contactForm').on('submit', function(e) {
-  e.preventDefault();
-  const $action = $(this).prop('action');
-  const $data = $(this).serialize();
-  const $this = $(this);
-  const name = $this.find('#name').val();
-  const email = $this.find('#email').val();
-  const subject = $this.find('#subject').val();
-  const message = $this.find('#message').val();
-  console.log({ query: $data });
-  console.log({ name, email, subject, message });
+// $('#contactForm').on('submit', function(e) {
+//   e.preventDefault();
+//   const $action = $(this).prop('action');
+//   const $data = $(this).serialize();
+//   const $this = $(this);
+//   const name = $this.find('#name').val();
+//   const email = $this.find('#email').val();
+//   const subject = $this.find('#subject').val();
+//   const message = $this.find('#message').val();
+//   console.log({ query: $data });
+//   console.log({ name, email, subject, message });
 
 
-  $this.prevAll('.alert').remove();
+//   $this.prevAll('.alert').remove();
 
   // $.post($action, $data, function(data) {
 
@@ -327,4 +329,4 @@ $('#contactForm').on('submit', function(e) {
   //   }
 
   // }, 'json');
-});
+// });
