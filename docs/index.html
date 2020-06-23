@@ -149,7 +149,6 @@
 				</div>
 			</div>
 		</div>
-		</div>
 	</section>
 	<!-- End About Section -->
 
@@ -182,8 +181,10 @@
 
 	<!-- Button trigger modal -->
 
+	<!-- Projects Section -->
 
-	<!-- Modal -->
+	<!-- Project | Modal Start -->
+
 	<div class="modal "
 			 id="modal-operasofia"
 			 tabindex="-1"
@@ -210,10 +211,42 @@
 					<h4>Description</h4>
 					<p>Official website of Sofia National Opera and Ballet</p>
 					<h4>Feautures</h4>
-					<p>cross-browser development, responsive design, animation</p>
+					<p>cross-browser development, responsive design, animations</p>
 					<h4>Technologies</h4>
-					<p>LAMP Stack, Laravel, jQuery, SCSS, HTML</p>
-					<h4></h4>
+					<p>Laravel, Blade template engine, jQuery, SCSS, HTML</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal "
+			 id="modal-urbn"
+			 tabindex="-1"
+			 role="dialog"
+			 aria-labelledby="modalUrbnLabel">
+		<div class="modal-dialog"
+				 role="document">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<button type="button"
+									class="close"
+									data-dismiss="modal"
+									aria-label="Close"><span aria-hidden="true">×</span></button>
+					<div class="modal-title">
+						<h4 id="modalUrbnLabel">Urbn.dir.bg</h4>
+						<a href="https://urbn.dir.bg/urbn-music-club/muzikata-koyato-prevarna-desy-v-dzhesi-uayt-kakvo-ne-znaete-za-novata-i-pesen"
+							 target="_blank">
+							<i class="fa fa-globe"></i>
+						</a>
+					</div>
+				</div>
+				<div class="modal-body">
+					<h4>Description</h4>
+					<p>News Inner page for the website urbn.dir.bg</p>
+					<h4>Feautures</h4>
+					<p>cross-browser development, responsive design</p>
+					<h4>Technologies</h4>
+					<p>Laravel, Blade template engine, jQuery, SCSS, HTML</p>
 				</div>
 			</div>
 		</div>
@@ -253,7 +286,6 @@
 						panel, WYSIWYG Editor, image upload, infinity-scroll, pagination</p>
 					<h4>Technologies</h4>
 					<p>MEAN Stack - MongoDB, Express, Angular, Node.js</p>
-					<h4></h4>
 				</div>
 			</div>
 		</div>
@@ -292,13 +324,15 @@
 					<p>CRUD, authentication, authorization, image-upload, infinity-scroll</p>
 					<h4>Technologies</h4>
 					<p>Angular, Firebase, Infinity-scroll</p>
-					<h4></h4>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<!-- Projects Section -->
+	<!-- Project | Modal End -->
+
+	<!-- Project | Navigation Start -->
+
 	<section id="projects"
 					 class="projects-section text-center section-padding">
 		<div class="container">
@@ -316,7 +350,9 @@
 					<button class="btn btn-success shuffle-button"
 									data-group="nodejs">Node.js</button>
 					<button class="btn btn-success shuffle-button"
-									data-group="mean">MEAN</button>
+									data-group="mongoDB">MongoDB</button>
+					<button class="btn btn-success shuffle-button"
+									data-group="firebase">Firebase</button>
 
 				</div>
 				<div class="filter-group filter-options radio">
@@ -375,10 +411,20 @@
 						</div>
 						<div class="col-xs-6 col-sm-4 col-md-2 shuffle-wrapper">
 							<label class="shuffle-container">
-								<span class="text">MEAN</span>
+								<span class="text">MongoDB</span>
 								<input type="radio"
 											 class="shuffle-radio"
-											 value="mean"
+											 value="mongoDB"
+											 name="radio">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+						<div class="col-xs-6 col-sm-4 col-md-2 shuffle-wrapper">
+							<label class="shuffle-container">
+								<span class="text">Firebase</span>
+								<input type="radio"
+											 class="shuffle-radio"
+											 value="firebase"
 											 name="radio">
 								<span class="checkmark"></span>
 							</label>
@@ -386,11 +432,14 @@
 					</div>
 				</div>
 			</div>
+			<!-- Project | Navigation End -->
 
+			<!-- Project Details Start -->
 
 			<div class="row my-shuffle-container">
+
 				<div class="picture-item column"
-						 data-groups='["jquery","javascript","php","laravel"]'
+						 data-groups='["jquery","javascript"]'
 						 data-date-created="2020"
 						 data-title="SofiaOpera">
 					<div class="aspect aspect--16x9">
@@ -401,14 +450,32 @@
 							<div class="img-overlay ">
 								<button class=" btn btn-success text-center"
 												data-toggle="modal"
-												data-target="#modal-operasofia">Show Details
+												data-target="#modal-operasofia">Show Details</button>
 							</div>
 						</div>
 					</div>
 				</div>
 
 				<div class="picture-item column"
-						 data-groups='["angular", "nodejs", "javascript", "mean"]'
+						 data-groups='["jquery","javascript"]'
+						 data-date-created="2020-01"
+						 data-title="Urbn">
+					<div class="aspect aspect--16x9">
+						<div class="aspect__inner">
+							<img class="image lazy"
+									 data-src="./assets/images/works/urbn.dir.bg_720p.jpg"
+									 alt="View of news inner page for the website urbn.dir.bg" />
+							<div class="img-overlay ">
+								<button class=" btn btn-success text-center"
+												data-toggle="modal"
+												data-target="#modal-urbn">Show Details</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="picture-item column"
+						 data-groups='["angular", "nodejs", "javascript", "mongoDB"]'
 						 data-date-created="2019"
 						 data-title="TheNewsroom">
 					<div class="aspect aspect--16x9">
@@ -419,14 +486,14 @@
 							<div class="img-overlay ">
 								<button class=" btn btn-success text-center"
 												data-toggle="modal"
-												data-target="#modal-thenewsroom">Show Details
+												data-target="#modal-thenewsroom">Show Details</button>
 							</div>
 						</div>
 					</div>
 				</div>
 
 				<div class="picture-item column"
-						 data-groups='["angular","javascript"]'
+						 data-groups='["angular","javascript","firebase"]'
 						 data-date-created="2017-09"
 						 data-title="SnapIT">
 					<div class="aspect aspect--16x9">
@@ -437,16 +504,20 @@
 							<div class="img-overlay ">
 								<button class=" btn btn-success text-center"
 												data-toggle="modal"
-												data-target="#modal-snapit">Show Details
+												data-target="#modal-snapit">Show Details</button>
 							</div>
 						</div>
 					</div>
 				</div>
 
+
+				<div class="col-1@sm my-sizer-element">
+
+				</div>
 			</div>
-			<div class="col-1@sm my-sizer-element"></div>
 		</div>
 	</section>
+	<!-- Project | Details End -->
 	<!-- End Work Section -->
 
 	<!-- Hire Section -->
