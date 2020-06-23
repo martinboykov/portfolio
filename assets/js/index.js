@@ -35,7 +35,7 @@ if (regex.test(navigator.userAgent)) {
 // $('.lazy').lazy();
 $('.lazy').lazy({
   combined: true,
-  delay: 2000,
+  delay: 1000,
 });
 $('#pre-status').fadeOut();
 $('#tt-preloader').delay(50).fadeOut('slow');

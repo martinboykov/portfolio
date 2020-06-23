@@ -1107,7 +1107,9 @@ body.modal-open {
 
 /* ---------------------------------------------- */
 
-.contact-section {}
+.contact-section {
+    min-height: calc(100vh - 60px - 60px);
+}
 
 .contact-section .wrapper {
     display: flex;
