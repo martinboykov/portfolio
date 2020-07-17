@@ -4,7 +4,11 @@
   "description": "my personal portfolio",
   "main": "index.js",
   "scripts": {
-    "gulp": "gulp"
+    "gulp": "gulp",
+    "preinstall": "npx npm-force-resolutions"
+  },
+  "resolutions": {
+    "graceful-fs": "4.2.3"
   },
   "repository": {
     "type": "git",
@@ -20,6 +24,7 @@
   "dependencies": {
     "bootstrap": "^3.4.1",
     "easy-pie-chart": "^2.1.7",
+    "gsap": "^3.4.0",
     "jquery": "^3.4.1",
     "jquery-inview": "^1.1.2",
     "jquery-lazy": "^1.7.10",
