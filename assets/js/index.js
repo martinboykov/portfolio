@@ -45,14 +45,14 @@ $('#tt-preloader').delay(50).fadeOut('slow');
  * Home Animation
 /* ---------------------------------------------- */
 if (!isMobile) {
-  const minDist = 20;
-  const maxDist = 120;
+  const minDist = 1;
+  const maxDist = 200;
   const duration = 3;
   const opVal = 0;
   const getText = (selector) => document.querySelector(selector);
   const getLetters = (selector) => gsapCustom.Plugins.SplitText(getText(selector), { words: 1, chars: 1, spacing: 10 }).chars;
-  const getSign = () => gsap.utils.random(1, 6, 1) == 1 ? 1 : -1; // gsap.utils.random(min,max,increment)
-  const getDistance = (minDist, maxDist) => gsap.utils.random(minDist, maxDist, 1);
+  const getSign = () => gsap.utils.random(1, 2, 1) == 1 ? 1 : -1; // gsap.utils.random(min,max,increment)
+  const getDistance = (min, max) => gsap.utils.random(min, max, 1);
   const getRotAngle = () => gsap.utils.random(1, 90, 1);
   const getScaleFactor = () => gsap.utils.random(1, 6, 1);
   $("body").addClass("fixed");
@@ -76,7 +76,6 @@ if (!isMobile) {
     .forEach((letter) => getAnimation(letter));
   getAnimation('.social-icons .list-inline li');
   getAnimation('.mouse-icon');
-
 }
 
 // -------------------------------------------------------------
