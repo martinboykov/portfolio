@@ -45,28 +45,38 @@ $('#tt-preloader').delay(50).fadeOut('slow');
  * Home Animation
 /* ---------------------------------------------- */
 if (!isMobile) {
-  const minDist = 10;
-  const maxDist = 100;
-  const timeline = 3;
-  let text = document.body.querySelector(".text.name");
-  let letters = gsapCustom.Plugins.SplitText(text, { words: 1, chars: 1, spacing: 10 }).chars;
-  let distance = Math.floor(Math.random() * maxDist + minDist);
-  let sign1 = Math.floor(Math.random() * 2) == 1 ? 1 : -1;
-  let sign2 = Math.floor(Math.random() * 2) == 1 ? 1 : -1;
-  letters.forEach(element => {
-    gsap.from($(element), timeline, { y: `${sign1}${distance}px`, x: `${sign2}${distance}px`, opacity: "0" });
-    distance = Math.floor(Math.random() * maxDist + minDist);
-    sign1 = Math.floor(Math.random() * 2) == 1 ? 1 : -1;
-    sign2 = Math.floor(Math.random() * 2) == 1 ? 1 : -1;
+  const minDist = 20;
+  const maxDist = 120;
+  const duration = 3;
+  const opVal = 0;
+  const getText = (selector) => document.querySelector(selector);
+  const getLetters = (selector) => gsapCustom.Plugins.SplitText(getText(selector), { words: 1, chars: 1, spacing: 10 }).chars;
+  const getSign = () => gsap.utils.random(1, 6, 1) == 1 ? 1 : -1; // gsap.utils.random(min,max,increment)
+  const getDistance = (minDist, maxDist) => gsap.utils.random(minDist, maxDist, 1);
+  const getRotAngle = () => gsap.utils.random(1, 90, 1);
+  const getScaleFactor = () => gsap.utils.random(1, 6, 1);
+  $("body").addClass("fixed");
+  const getAnimation = (letter, min = minDist, max = maxDist, sF = getScaleFactor()) => {
+    return gsap.from($(letter), duration, {
+      opacity: opVal,
+      x: `${getSign()}${getDistance(min, max)}`,
+      y: `${getSign()}${getDistance(min, max)}`,
+      rotation: `${getSign() * getSign()}${getRotAngle()}`,
+      scale: sF,
+      onComplete: () => { $("body").removeClass("fixed"); }
+    });
+  };
+  $('.nav.navbar-nav li a').each(function() {
+    getLetters(`.` + $(this).attr('class'))
+      .forEach((letter) => getAnimation(letter, minDist, maxDist, 1));
   });
-  text = document.body.querySelector(".text.title");
-  letters = gsapCustom.Plugins.SplitText(text, { words: 1, chars: 1, spacing: 10 }).chars;
-  letters.forEach(element => {
-    gsap.from($(element), timeline, { y: `${sign1}${distance}px`, x: `${sign2}${distance}px`, opacity: "0" });
-    distance = Math.floor(Math.random() * maxDist + minDist);
-    sign1 = Math.floor(Math.random() * 2) == 1 ? 1 : -1;
-    sign2 = Math.floor(Math.random() * 2) == 1 ? 1 : -1;
-  });
+  getLetters('.text.name')
+    .forEach((letter) => getAnimation(letter));
+  getLetters('.text.title')
+    .forEach((letter) => getAnimation(letter));
+  getAnimation('.social-icons .list-inline li');
+  getAnimation('.mouse-icon');
+
 }
 
 // -------------------------------------------------------------

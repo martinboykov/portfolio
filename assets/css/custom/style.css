@@ -306,7 +306,13 @@ ul.list-check li::before {
 }
 
 /* === HOME === */
-
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
 .tt-fullHeight {
     height: calc(100vh - 60px);
 }
@@ -342,9 +348,9 @@ ul.list-check li::before {
 }
 
 .intro h1 {
+    margin-bottom: 16px;
     font-size: 60px;
     line-height: 80px;
-    margin-bottom: 16px;
     color: #52b3d9;
 }
 
@@ -376,13 +382,10 @@ ul.list-check li::before {
 
 /* === Hero Section === */
 
-.name {
-    display: flex;
-    justify-content: center;
-}
-.letter {
+.text {
     display: inline-block;
 }
+
 .blue {
     color: #52b3d9;
 }
@@ -563,8 +566,6 @@ SOCIAL ICON
     /* background: #222; */
     background: white;
 }
-
-
 
 /* === About Section === */
 
