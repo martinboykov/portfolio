@@ -1,2 +1,43 @@
-@import url('https://fonts.googleapis.com/css?family=Cinzel&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+@font-face {
+  font-family: 'Roboto';
+  src: url('../../fonts/Roboto/roboto-regular.eot');
+  src: url('../../fonts/Roboto/roboto-regular.eot?#iefix') format('embedded-opentype'),
+       url('../../fonts/Roboto/roboto-regular.woff2') format('woff2'),
+       url('../../fonts/Roboto/roboto-regular.woff') format('woff'),
+       url('../../fonts/Roboto/roboto-regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../../fonts/Roboto/roboto-bold.eot');
+  src: url('../../fonts/Roboto/roboto-bold.eot?#iefix') format('embedded-opentype'),
+       url('../../fonts/Roboto/roboto-bold.woff2') format('woff2'),
+       url('../../fonts/Roboto/roboto-bold.woff') format('woff'),
+       url('../../fonts/Roboto/roboto-bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Cinzel';
+  src: url('../../fonts/Cinzel/cinzel-regular.eot');
+  src: url('../../fonts/Cinzel/cinzel-regular.eot?#iefix') format('embedded-opentype'),
+       url('../../fonts/Cinzel/cinzel-regular.woff2') format('woff2'),
+       url('../../fonts/Cinzel/cinzel-regular.woff') format('woff'),
+       url('../../fonts/Cinzel/cinzel-regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cinzel';
+  src: url('../../fonts/Cinzel/cinzel-bold.eot');
+  src: url('../../fonts/Cinzel/cinzel-bold.eot?#iefix') format('embedded-opentype'),
+       url('../../fonts/Cinzel/cinzel-bold.woff2') format('woff2'),
+       url('../../fonts/Cinzel/cinzel-bold.woff') format('woff'),
+       url('../../fonts/Cinzel/cinzel-bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}

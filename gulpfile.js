@@ -28,10 +28,8 @@ gulp.task('clean:docs', function() {
 });
 
 gulp.task('fonts', function() {
-  gulp.src('./assets/fonts/bootstrap/*')
-    .pipe(gulp.dest('docs/assets/fonts/bootstrap'));
-  gulp.src('./assets/fonts/fontawesome/*')
-    .pipe(gulp.dest('docs/assets/fonts/fontawesome'));
+  gulp.src('./assets/fonts/**')
+    .pipe(gulp.dest('docs/assets/fonts/'));
 });
 
 gulp.task('images', function() {
@@ -61,14 +59,6 @@ gulp.task('css-dev', function() {
     .pipe(autoprefixer('last 2 versions'))
     .pipe(rename('fonts.min.css'))
     .pipe(gulp.dest('docs/assets/css/fonts'));
-
-  // gulp.src([
-  //   './assets/css/vendor/bootstrap.css',
-  //   './assets/css/vendor/font-awesome.min.css',
-  // ])
-  //   .pipe(concat('vendor.min.css'))
-  //   .pipe(autoprefixer('last 2 versions'))
-  //   .pipe(gulp.dest('docs/assets/css/vendor'));
 
   gulp.src([
     './assets/css/vendor/bootstrap.css',
