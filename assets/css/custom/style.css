@@ -432,7 +432,6 @@ ul.list-check li::before {
     height: 4vw;
     background-color: var(--primary);
     animation: sk-rotateplane 1.2s infinite ease-in-out;
-
 }
 
 /* === Hero Section === */
@@ -1108,10 +1107,34 @@ SOCIAL ICON
 }
 
 /* === Modal (overwrite bootstrap classes) === */
-.modal-dialog {
-    max-width: 600px;
+.modal {
+    text-align: center;
+    padding: 0 !important;
+}
+@media screen and (min-width: 768px) {
+    .modal:before {
+        display: inline-block;
+        vertical-align: middle;
+        content: ' ';
+        height: 100%;
+    }
 }
 
+.modal-dialog {
+    max-width: 600px;
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+@media screen and (max-width: 768px) {
+    .modal-dialog {
+        max-width: auto;
+        width: 100%;
+        display: inline-block;
+        margin: 0;
+        margin-top: 80px;
+    }
+}
 .modal-header h4 {
     text-transform: capitalize;
 }
@@ -1428,7 +1451,6 @@ body.modal-open {
 
 /* Animation  */
 
-
 @keyframes drop {
     0% {
         top: 5px;
@@ -1452,7 +1474,6 @@ body.modal-open {
     /* animation-iteration-count: 1; */
     /* animation-play-state: running; */
 }
-
 
 @keyframes fadeInUp {
     0% {
