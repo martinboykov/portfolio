@@ -31,6 +31,7 @@ if (regex.test(navigator.userAgent)) {
 }
 $(window).on('load', function() {
   $('#preloader').fadeOut(1000);
+  if (isMobile) $("body").removeClass("fixed");
 });
 
 /* ---------------------------------------------- /*
@@ -60,7 +61,7 @@ if (!isMobile) {
   const getDistance = (min, max) => gsap.utils.random(min, max, 1);
   const getRotAngle = () => gsap.utils.random(1, 90, 1);
   const getScaleFactor = () => gsap.utils.random(1, 6, 1);
-  $("body").addClass("fixed");
+  // $("body").addClass("fixed");
   const getAnimation = (letter, min = minDist, max = maxDist, sF = getScaleFactor()) => {
     return gsap.from($(letter), duration, {
       opacity: opVal,
