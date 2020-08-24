@@ -13,7 +13,6 @@ import 'bootstrap';
 import Shuffle from 'shufflejs';
 import WOW from 'wow.js/dist/wow.js';
 
-
 new WOW({ mobile: false }).init();
 
 
@@ -99,10 +98,10 @@ $(window).resize(function() {
 });
 
 if (!isMobile) {
-  $(".section").SnapScroll({
-    animateDuration: 1000,
-    wheelInterval: 100,
-  });
+  // $(".section").SnapScroll({
+  //   animateDuration: 1000,
+  //   wheelInterval: 100,
+  // });
 }
 
 // -------------------------------------------------------------
