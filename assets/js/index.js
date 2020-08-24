@@ -1,10 +1,10 @@
-import './jquery';
+import './jqueryLoader';
 /* jQuery plugins */
 // import 'easy-pie-chart/dist/jquery.easypiechart';
 import 'jquery-inview';
 import 'jscroll';
 import 'jquery-lazy';
-import './snap-scroll';
+// import './snap-scroll';
 
 import { gsap } from 'gsap';
 import './splittext';
