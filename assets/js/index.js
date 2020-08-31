@@ -1,10 +1,8 @@
 import './jqueryLoader';
 /* jQuery plugins */
-// import 'easy-pie-chart/dist/jquery.easypiechart';
 import 'jquery-inview';
 import 'jscroll';
 import 'jquery-lazy';
-// import './snap-scroll';
 
 import { gsap } from 'gsap';
 import './splittext';
@@ -97,12 +95,6 @@ $(window).resize(function() {
   // adjustModalPosition();
 });
 
-if (!isMobile) {
-  // $(".section").SnapScroll({
-  //   animateDuration: 1000,
-  //   wheelInterval: 100,
-  // });
-}
 
 // -------------------------------------------------------------
 // Menu
