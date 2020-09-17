@@ -345,10 +345,10 @@ ul.list-check li::before {
 }
 
 #home {
-    background: url(../../images/home-bg.jpg) no-repeat center center;
-    background-attachment: fixed;
-    background-color: #222;
-    background-size: cover;
+    /* background: url(../../images/home-bg.jpg) no-repeat center center; */
+    /* background-attachment: fixed; */
+    /* background-color: #222; */
+    /* background-size: cover; */
     padding: 0;
     position: relative;
 }

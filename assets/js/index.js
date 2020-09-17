@@ -3,6 +3,7 @@ import './jqueryLoader';
 import 'jquery-inview';
 import 'jscroll';
 import 'jquery-lazy';
+import 'jquery-parallax.js';
 
 import { gsap } from 'gsap';
 import './splittext';
@@ -30,6 +31,11 @@ $(window).on('load', function() {
   $('#preloader').fadeOut(1000);
   if (isMobile) $("body").removeClass("fixed");
 });
+
+
+
+$('.parallax-window').parallax({imageSrc: './assets/images/home-bg.jpg',
+speed: 0.4});
 
 /* ---------------------------------------------- /*
  * Preloader
@@ -112,6 +118,8 @@ $(document).click(function(e) {
 $menu.click(function() {
   $navbar.slideToggle();
 })
+
+
 
 // -------------------------------------------------------------
 // Animated scrolling
